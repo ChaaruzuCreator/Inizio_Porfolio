@@ -8,6 +8,10 @@
     {
       "src": "css/**/*.css",
       "use": "@vercel/static"
+    },
+    {
+      "src": "video/**/*",
+      "use": "@vercel/static"
     }
   ],
   "routes": [
@@ -18,6 +22,10 @@
     {
       "src": "/css/(.*)",
       "dest": "/css/$1"
+    },
+    {
+      "src": "/video/(.*)",
+      "dest": "/video/$1"
     },
     {
       "src": "/(.*)",
