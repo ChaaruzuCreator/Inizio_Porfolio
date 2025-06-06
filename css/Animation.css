@@ -1,0 +1,262 @@
+.social-media a  {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    font-size: 40px;
+    margin: 30px 15px 30px 0;
+    color: rgb(0, 101, 216);
+    transform: translateZ(0);
+}
+
+.social-media a i {
+    transform: translateZ(0);
+    transition: transform 0.5s ease;
+}
+
+.social-media a i:hover {
+    transform: scale(1.5) rotate(6deg);
+}
+
+.btn a {
+    color: azure;
+    border: 1px solid white;
+    padding: 12px 20px 12px 20px;
+    font-weight: 100;
+    font-size: 15px;
+    letter-spacing: 3px;
+    transition: 0.3s;   
+}
+
+.btn a:hover {
+    color: rgb(146, 149, 151);
+    border: 1px solid rgb(153, 156, 158);
+}
+
+.picture-1:hover .text-image{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #191426c0;
+    opacity: 1;
+    
+}
+
+
+.img-size:hover {
+    transform: scale(1.1) rotate(-6deg);
+}
+
+.minecraft:hover {
+    transform: scale(1.5);
+    background-size: 250%;
+}
+
+.subnautica:hover {
+    transform: scale(1.5);
+    background-size: 108%;
+}
+
+.osu:hover {
+    transform: scale(1.5);
+    background-size: 125%;
+}
+
+.games {
+    transform: translateY(0);
+    transition: 1s;
+}
+
+
+.games:hover {
+    transform: scale(1.15);
+}
+
+
+.games:hover  .img-texts{
+    height: 100%;
+    opacity: 1;
+}
+
+.nav-bar ul li a:hover ,
+.nav-bar ul li a.active {
+    padding: 10px;
+    border-bottom: 2px solid rgb(170, 77, 194);
+    color: rgb(235, 235, 235);
+}
+
+
+.contact i, .contact-2 i {
+    transform: translateZ(0);
+    transition: transform 0.5s ease;
+    
+}
+
+.contact i:hover, 
+.contact-2 i:hover  {
+    transform: scale(1.5) rotate(6deg);
+}
+
+.picture-1 {
+    transform: translateX(-100%);
+    transition: all 1.2s;
+}
+figcaption {
+    transform: translateX(100%);
+    transition: all 1s;
+}
+
+.picture-2 {
+    transform: translateX(100%);
+    transition: all 1.2s;
+}
+.figcaption {
+    transform: translateX(-100%);
+    transition: all 1s;
+}
+
+.boxy-1 {
+    transform: translateX(100%);
+    transition: all 1.2s;
+}
+
+
+
+.hidden {
+    opacity: 0;
+    filter: blur(5px);
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+
+.header-box {
+    animation: fade-down-fast 1s;
+}
+
+.text {
+    animation: fade-up 1s;
+    
+}
+
+.picture-1 {
+    border: 15px solid rgba(65, 62, 62, 0.973);
+    border-radius: 0;
+}
+.picture-2 {
+    border: 15px solid rgba(65, 62, 62, 0.973);
+;
+    border-radius: 0;
+}
+
+.picture-1:hover{
+    border: 15px solid rgba(114, 50, 241, 0.973)
+}
+.picture-2:hover {
+    border: 15px solid rgba(114, 50, 241, 0.973)
+}
+
+.sign {
+    animation: zoom 1s infinite;
+    animation-direction: alternate-reverse;
+}
+
+
+
+@media (min-width: 768px) {
+    
+.anim-typewriter{
+    display: block;
+    opacity: 1;
+    transition: all 1s;
+    animation: typewriter 2s steps(21) 1s 1 normal both
+            
+}
+@keyframes typewriter{
+  from{width: 0;}
+  to{width: 330px;}
+}
+@keyframes blinkTextCursor{
+  from{border-right-color: rgba(225, 127, 255, 0.75);}
+  to{border-right-color: transparent;}
+}
+}
+
+
+
+@keyframes fade-up {
+    0% {
+        opacity: 0;
+        transform: translateY(30px) scale(1.2);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px) scale(l);
+    }
+}
+
+@keyframes fade-up-2 {
+    0% {
+        opacity: 0;
+        transform: translateY(20px) scale(1);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px) scale(l);
+    }
+}
+
+@keyframes fade-down {
+    0% {
+        opacity: 0;
+        transform: translateY(-150px) scale(1);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px) scale(l);
+    }
+}
+
+@keyframes fade-down-fast {
+    0% {
+        opacity: 0;
+        transform: translateY(-150px) scale(1);
+    }
+
+    50% {
+        opacity: 0.5;
+        transform: translateY(-100px) scale(1);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px) scale(l);
+    }
+}
+
+@keyframes zoom {
+    0% {
+        transform: rotateZ(-5deg);
+    }
+
+    100% {
+        transform: rotateZ(5deg);
+    }
+}
