@@ -12,6 +12,10 @@
     {
       "src": "video/**/*",
       "use": "@vercel/static"
+    },
+    {
+      "src": "Video/**/*",
+      "use": "@vercel/static"
     }
   ],
   "routes": [
@@ -26,6 +30,10 @@
     {
       "src": "/video/(.*)",
       "dest": "/video/$1"
+    },
+    {
+      "src": "/Video/(.*)",
+      "dest": "/Video/$1"
     },
     {
       "src": "/(.*)",
