@@ -1,0 +1,55 @@
+/* Base cursor for body */
+html, body {
+    cursor: url('../Photo/CursorMoto.png'), auto; 
+}
+
+/* Interactive elements cursor */
+a,
+button,
+.clickable,
+.download-cv,
+.nav-bar ul li a,
+.tab-links,
+.minecraft,
+.subnautica,
+.osu,
+.img-texts,
+.information h1,
+.information h4,
+.information p,
+.btn2,
+.social-links a,
+.home a i,
+.btn a,
+input[type="text"],
+input[type="email"],
+textarea,
+[onclick],
+[role="button"],
+.picture-1,
+.picture-2,
+.games,
+.text-image {
+    cursor: url('../Photo/CursorMoto.png'), pointer !important;
+}
+
+/* Hover states */
+.nav-bar ul li a:hover,
+.download-cv:hover,
+.social-links a:hover,
+.btn a:hover,
+.tab-links:hover,
+.games:hover,
+.picture-1:hover,
+.picture-2:hover,
+.message:hover,
+.btn2:hover {
+    cursor: url('../Photo/CursorMoto.png'), pointer !important;
+}
+
+/* Form elements focus state */
+input:focus,
+textarea:focus,
+button:focus {
+    cursor: url('../Photo/CursorMoto.png'), text !important;
+}

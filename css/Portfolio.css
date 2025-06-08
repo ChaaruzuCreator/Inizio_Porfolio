@@ -5,6 +5,7 @@
     text-decoration: none;
     font-family: sans-serif;
     box-sizing: border-box;
+    cursor: url('../Photo/CursorMoto.png'), pointer;
 }
 
 html, body {
@@ -12,9 +13,6 @@ html, body {
     overflow-x: hidden;
 }
 
-html.has-scroll-smooth {
-    overflow: hidden;
-}
 
 body {
     overflow-x: hidden;
@@ -101,6 +99,7 @@ section {
     font-size: 15px;
     transition: color 0.5s;
     letter-spacing: 1px;
+    font-family: 'cocogoose', sans-serif;
 }
 
 .nav-bar ul li a.active {
@@ -125,12 +124,14 @@ section {
 .download-cv {
     border: 2px solid #9016c0;
     transition: 0.5s ease;
+    font-family: 'MCpixel', sans-serif
 
 }
 .download-cv:hover {
     background-color: #9016c0;
     color: white;
     transition: 0.5s ease;
+    
 }
 
 /* ------------------------HOME PAGE 1----------------------- */
@@ -236,6 +237,7 @@ section {
 }
 
 .description h3 {
+    font-family: "MCpixel", sans-serif;
     color: rgb(179, 179, 179);
     font-size: 40px;
     margin: 10px 0 20px 0;
@@ -476,6 +478,7 @@ figcaption p {
     background-color: rgba(25, 20, 38, 0.8);
     transition: 1s;
     opacity: 0;
+    
 }
 
 .text-hover {
@@ -485,6 +488,7 @@ figcaption p {
 }
 
 .img-texts h3 {
+    font-family: 'MCpixel', sans-serif;
     font-size: 40px;
 }
 
