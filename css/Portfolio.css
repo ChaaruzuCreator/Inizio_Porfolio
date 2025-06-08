@@ -426,7 +426,7 @@ figcaption p {
 }
 
 .minecraft {
-    background: url(Minecraft.png);
+    background: url('../Photo/Minecraft.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -438,7 +438,7 @@ figcaption p {
 }
 
 .subnautica {
-    background: url(GithubLinkpng.png);
+    background: url('../Photo/GithubLinkpng.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -450,7 +450,7 @@ figcaption p {
 }
 
 .osu {
-    background: url(osu.jpg);
+    background: url('../Photo/osu.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
