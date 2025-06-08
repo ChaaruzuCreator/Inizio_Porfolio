@@ -16,6 +16,14 @@
     {
       "src": "Video/**/*",
       "use": "@vercel/static"
+    },
+    {
+      "src": "Logo/**/*.{png,jpg,jpeg,gif,ico,svg}",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "Photo/**/*.{png,jpg,jpeg,gif,ico,svg}",
+      "use": "@vercel/static"
     }
   ],
   "routes": [
@@ -34,6 +42,14 @@
     {
       "src": "/Video/(.*)",
       "dest": "/Video/$1"
+    },
+    {
+      "src": "/Logo/(.*)",
+      "dest": "/Logo/$1"
+    },
+    {
+      "src": "/Photo/(.*)",
+      "dest": "/Photo/$1"
     },
     {
       "src": "/(.*)",
