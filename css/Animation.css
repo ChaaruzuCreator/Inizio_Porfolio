@@ -58,7 +58,6 @@
 }
 
 .minecraft:hover {
-    transform: scale(1.5);
     background-size: 250%;
 }
 
