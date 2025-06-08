@@ -58,16 +58,17 @@
 }
 
 .minecraft:hover {
+    transform: scale(1);
     background-size: 250%;
 }
 
 .subnautica:hover {
-    transform: scale(1.5);
+    transform: scale(1);
     background-size: 108%;
 }
 
 .osu:hover {
-    transform: scale(1.5);
+    transform: scale(1);
     background-size: 125%;
 }
 
@@ -76,10 +77,6 @@
     transition: 1s;
 }
 
-
-.games:hover {
-    transform: scale(1.15);
-}
 
 
 .games:hover  .img-texts{
