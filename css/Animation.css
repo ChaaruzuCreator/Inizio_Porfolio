@@ -27,7 +27,12 @@
     font-weight: 100;
     font-size: 15px;
     letter-spacing: 3px;
-    transition: 0.3s;   
+    transition: 0.3s; 
+    
+}
+
+.btn {
+    display: inline-flex;
 }
 
 .btn a:hover {

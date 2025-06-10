@@ -8,11 +8,12 @@
     position: fixed;
     width: 48px;
     height: 48px;
-    background: url('../Photo/CursorMoto.png') no-repeat center center;
+    background: url('../Photo/CursorMoto.png') no-repeat top left;
     background-size: contain;
     pointer-events: none;
     z-index: 9999;
-    transform: translate(-50%, -50%);
+    /* Remove the centered transform to allow precise positioning */
+    transform-origin: 0 0;
     transition: transform 0.1s ease;
 }
 
@@ -24,22 +25,22 @@
 /* Animation for cursor beating effect */
 @keyframes cursorBeat {
     0% {
-        transform: translate(-50%, -50%) scale(1);
+        transform: scale(1);
     }
     50% {
-        transform: translate(-50%, -50%) scale(1.3);
+        transform: scale(1.3);
     }
     100% {
-        transform: translate(-50%, -50%) scale(1);
+        transform: scale(1);
     }
 }
 
 /* Hover effect for links and buttons */
 .cursor.link-hover {
-    transform: translate(-50%, -50%) scale(1.2);
+    transform: scale(1.2);
 }
 
 /* Text input style */
 .cursor.input-hover {
-    transform: translate(-50%, -50%) scale(0.7);
+    transform: scale(0.7);
 }

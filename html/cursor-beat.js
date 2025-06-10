@@ -3,18 +3,26 @@ document.addEventListener('DOMContentLoaded', () => {
     const cursor = document.createElement('div');
     cursor.classList.add('cursor');
     document.body.appendChild(cursor);
-
+    
     // Track cursor position
     function updateCursorPosition(e) {
-        cursor.style.left = `${e.clientX}px`;
-        cursor.style.top = `${e.clientY}px`;
-    }
-
-    // Add beat animation on click
+        // Apply offsets to position the pointer tip exactly at the mouse position
+        // These values align the pointer tip with the actual mouse position
+        const offsetX = 0;  // Adjust this based on your cursor image
+        const offsetY = 0;  // Adjust this based on your cursor image
+        
+        cursor.style.left = `${e.clientX + offsetX}px`;
+        cursor.style.top = `${e.clientY + offsetY}px`;
+    }// Add beat animation on click
     function addBeatAnimation() {
+        // Set the transform origin to be at the pointer tip during animation
+        // This ensures the cursor beats from the pointer tip, not the center
+        cursor.style.transformOrigin = "10px 10px"; // Adjust these values to match your cursor's pointer position
         cursor.classList.add('beat');
         setTimeout(() => {
             cursor.classList.remove('beat');
+            // Reset transform origin after animation
+            cursor.style.transformOrigin = "0 0";
         }, 300); // Duration should match CSS animation
     }
 

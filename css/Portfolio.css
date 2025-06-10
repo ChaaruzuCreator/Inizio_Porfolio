@@ -98,7 +98,7 @@ section {
     font-size: 15px;
     transition: color 0.5s;
     letter-spacing: 1px;
-    font-family: 'cocogoose', sans-serif;
+    font-family: sans-serif;
 }
 
 .nav-bar ul li a.active {
@@ -146,6 +146,23 @@ section {
     background: linear-gradient(180deg, rgba(19, 12, 29, 0.795) 50%, rgb(13, 6, 22) 100%);
 }
 
+.home h1 {
+    color: rgb(255, 255, 255);
+    font-size: 200px;
+    letter-spacing: 20px;
+    font-family: "Albert Sans";
+    font-size: 96px;
+    font-weight: 800;
+    line-height: 100%;
+    margin-bottom: 16px;
+}
+
+.home h2 {
+    color: rgb(182, 182, 182);
+    font-size: 30px;
+    letter-spacing: 5px;
+    font-family: "Tilt Neon";
+}
 
 
 .home a i {
@@ -181,7 +198,6 @@ section {
 }
 
 .home1 {
-    background: url('../Photo/FirstBackgroundChaCha.png');
     display: flex;
     width: 100%;
     height: 100vh;
@@ -193,26 +209,28 @@ section {
     overflow: hidden;
     justify-content: center;
     align-items: center;
-    
+    border: 50px solid #0d0616;
+    background-color: #0d0616;
 }
 
-.home h1 {
-    color: rgb(255, 255, 255);
-    font-size: 200px;
-    letter-spacing: 20px;
-    font-family: "Albert Sans";
-    font-size: 96px;
-    font-weight: 800;
-    line-height: 100%;
-    margin-bottom: 16px;
+.home1::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('../Photo/FirstBackgroundChaCha.png');
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    border: 2px solid #faf2e9;
+    border-radius: 20px; /* Radius for the background image itself */
+    box-shadow: 0 0 0 2000px #0d0616; /* Extend the background color to hide white space */
+    clip-path: inset(0 0 0 0 round 20px); /* Clip to ensure no spillover beyond border radius */
 }
 
-.home h2 {
-    color: rgb(182, 182, 182);
-    font-size: 30px;
-    letter-spacing: 5px;
-    font-family: "Tilt Neon";
-}
+
 
 /* ------------------------HOME PAGE 2----------------------- */
 
@@ -255,14 +273,12 @@ section {
     text-align: justify;
 }
 
-.btn {
-    margin-top: 50px;
-}
+
 
 .section {
     display: flex;
     flex-direction: column;
-    background: linear-gradient(180deg, rgb(19, 12, 29) 18%, rgb(66, 33, 104) 100%);
+    background: linear-gradient(180deg, #0d0616 18%, rgb(66, 33, 104) 100%);
     width: 100%;
     position: relative;
     align-items: center;
@@ -318,7 +334,6 @@ figcaption p {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 10px;
     width: 100%;
     text-align: center;
     padding: 0 20px;
