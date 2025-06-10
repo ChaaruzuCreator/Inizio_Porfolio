@@ -37,6 +37,7 @@ section {
     background-color: #0e0818;
     box-shadow: 0 2px 8px rgba(0,0,0,0.15);
     transition: background 0.3s, box-shadow 0.3s;
+    border-bottom: 1px solid #fffaf38a;
 }
 
 .name {
@@ -45,7 +46,7 @@ section {
 }
 
 .name img {
-    width: 100px;
+    width: 50px;
     padding-right: 5px;
 }
 
@@ -211,6 +212,7 @@ section {
     align-items: center;
     border: 50px solid #0d0616;
     background-color: #0d0616;
+    transition: 0.5s;
 }
 
 .home1::before {
@@ -228,6 +230,12 @@ section {
     border-radius: 20px; /* Radius for the background image itself */
     box-shadow: 0 0 0 2000px #0d0616; /* Extend the background color to hide white space */
     clip-path: inset(0 0 0 0 round 20px); /* Clip to ensure no spillover beyond border radius */
+    
+}
+
+.home1:hover {
+    transform: scale(1.025);
+    transition: transform 0.5s ease;
 }
 
 
@@ -337,6 +345,7 @@ figcaption p {
     width: 100%;
     text-align: center;
     padding: 0 20px;
+    font-family: 'MCpixel', sans-serif;
 }
 .label-2 {
     margin-top: 80px;
@@ -344,6 +353,7 @@ figcaption p {
     font-weight: 700;
     color:#907bc5;
     align-items: center;
+    font-family: 'MCpixel', sans-serif;
 }
 
 .page-1 {
@@ -540,7 +550,7 @@ figcaption p {
     background-color: rgba(76, 56, 92, 0.588);
     padding: 20px;
     margin-right: 10px;
-    border-radius: 8px 8px 0 0;
+    border-radius: 8px;
     text-align: center;
     transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
     z-index: 2;
@@ -569,6 +579,7 @@ figcaption p {
     bottom: 0;
     transition: 0.5s;
     overflow: hidden;
+    border-radius: 0 0 8px 8px;
 }
 
 .tab-links.active-link::after{
@@ -577,13 +588,12 @@ figcaption p {
     
 }
 .tab-contents {
-    background-color: #1f1725;
     width: 90rem;
-    height: 500px;
-    padding: 15px;
+    min-height: 500px;
+    padding: 25px 15px;
     border-radius: 15px;
-    margin-bottom: 100px;
-    
+    transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+                transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .box-inside {
@@ -591,11 +601,31 @@ figcaption p {
 }
 
 h1.highlight {
-    font-size: 60px;
-    color: white;
-    margin-left: 10px;
-    font-family: Josefin Sans;
-    letter-spacing: 5px;
+    font-size: 28px; /* Further reduced from 30px to 28px */
+    color: #ffffff;
+    margin-bottom: 15px;
+    font-family: 'Josefin Sans';
+    letter-spacing: 1px;
+    position: relative;
+    padding-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    flex: 1; /* Make it take available space in the flex container */
+}
+
+h1.highlight::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 60px;
+    height: 3px;
+    background-color: #ffbd44;
+    border-radius: 2px;
+    transition: width 0.3s ease;
+}
+
+.tab-content-menu:hover h1.highlight::after {
+    width: 100px;
 }
 
 .nonelist {
@@ -618,10 +648,97 @@ h1.highlight {
     margin: 10px;
     overflow: hidden;
 }
+/* From Uiverse.io by Bastiennnn */
 .tab-content-menu {
     display: flex;
-    padding: 20px;
+    width: 60%; /* Further reduced from 80% to 70% */
+    margin: 20px auto;
+    background-color: #24233b;
+    border-radius: 8px;
+    z-index: 1;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.4);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
 }
+
+.tab-content-menu:hover {
+    transform: translateY(-7px);
+    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.5);
+}
+
+.tab-content-menu::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 30px;
+    width: 100%;
+    background-color: #302e4d;
+    border-radius: 8px 8px 0 0;
+    z-index: 1;
+}
+
+/* Add a subtle border between image and content */
+.tab-content-menu::after {
+    content: '';
+    position: absolute;
+    top: 30px;
+    bottom: 0;
+    left: 220px; /* Matches the width of the image */
+    width: 1px;
+    background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.1), transparent);
+    z-index: 1;
+}
+
+.circle {
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    display: flex;
+    gap: 6px;
+    z-index: 2; /* Ensure circles appear above other elements */
+}
+
+.circle2 {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.tab-content-menu:hover .circle2,
+.nonedesign:hover .circle2 {
+    transform: scale(1.2);
+}
+
+.red {
+    background-color: #ff605c;
+}
+
+.yellow {
+    background-color: #ffbd44;
+}
+
+.green {
+    background-color: #00ca4e;
+}
+
+.unit-1, .unit-2 {
+    padding: 20px;
+    margin: 50px;
+    color: #fff;
+    flex: 0.7; /* Further reduced flex value */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+    max-width: 100%; /* Reduced from 60% to 50% */
+}
+
+
 .unit-1 ul li{
     list-style: inside;
     margin: 10px 20px;
@@ -680,12 +797,27 @@ h1.highlight {
     width: 400px;
     aspect-ratio: 1/1;
     object-fit: cover;
-    overflow: hidden;
+    border-radius: 0 0 0 8px;
+    margin: 30px 0 0 0;
+    transition: all 0.5s ease;
+    filter: brightness(0.9);
+    box-shadow: 4px 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .graduation-pic-1 {
-    width: 170px;
-    height: 500px;
+    width: 220px; /* Further reduced from 250px to 220px */
+    aspect-ratio: 3/4;
+    object-fit: cover;
+    border-radius: 0 0 0 8px;
+    margin: 30px 0 0 0;
+    transition: all 0.5s ease;
+    filter: brightness(0.9);
+    box-shadow: 4px 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.tab-content-menu:hover .graduation-pic,
+.tab-content-menu:hover .graduation-pic-1 {
+    filter: brightness(1.1);
 }
 
 .picture-wave {
@@ -900,5 +1032,139 @@ textarea {
     background-repeat: no-repeat;
     background-size: 100%;
 
+}
+
+
+
+.unit-1 p, .unit-2 p {
+    font-size: 15px; /* Reduced from 17px to 15px */
+    line-height: 1.6;
+    color: #ccc;
+    margin-bottom: 15px; /* Reduced from 20px to 15px */
+    opacity: 0.9;
+    transition: all 0.3s ease;
+}
+
+.unit-1 h2, .unit-2 h2 {
+    font-size: 20px; /* Reduced from 22px to 20px */
+    color: #ffbd44;
+    margin: 15px 0; /* Reduced from 18px to 15px */
+    font-family: 'Josefin Sans', sans-serif;
+    position: relative;
+    padding-left: 15px;
+}
+
+.unit-1 h2::before, .unit-2 h2::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 8px;
+    background-color: #00ca4e;
+    border-radius: 50%;
+}
+
+.tab-content-menu:hover .unit-1 p,
+.tab-content-menu:hover .unit-2 p {
+    opacity: 1;
+}
+
+.unit-1 ul, .unit-2 ul {
+    margin: 0;
+    padding: 0 0 0 5px;
+}
+
+.unit-1 ul li, .unit-2 ul li {
+    list-style: inside;
+    margin: 8px 0; /* Reduced from 12px to 8px */
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px; /* Reduced from 17px to 15px */
+    color: #f0f0f0;
+    line-height: 22px; /* Reduced from 26px to 22px */
+    overflow: hidden;
+    transition: all 0.3s ease;
+    position: relative;
+    padding-left: 5px;
+}
+
+.unit-2 ul li {
+    list-style: none;
+    padding-left: 28px;
+    position: relative;
+}
+
+.unit-2 ul li i {
+    color: #00ca4e;
+    position: absolute;
+    left: 0;
+    top: 5px;
+    font-size: 18px;
+}
+
+.unit-1 ul li:hover, .unit-2 ul li:hover {
+    transform: translateX(5px);
+    color: #ffffff;
+}
+
+/* Make the tab contents fill the space */
+.tab-contents {
+    padding: 20px 0;
+}
+
+/* Styling for the "Favorite" tab */
+.nonedesign {
+    background-color: #24233b;
+    border-radius: 8px;
+    padding: 60px 30px 30px;
+    margin: 20px auto;
+    width: 70%; /* Reduced from 90% to 70% to match tab-content-menu */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    color: white;
+    position: relative;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nonedesign:hover {
+    transform: translateY(-7px);
+    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.5);
+}
+
+.nonedesign::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 30px;
+    width: 100%;
+    background-color: #302e4d;
+    border-radius: 8px 8px 0 0;
+    z-index: 1;
+}
+
+.unit-header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 15px;
+}
+
+/* Adjust highlight styling for unit-header layout */
+.unit-header h1.highlight {
+    margin-bottom: 0;
+    padding-bottom: 5px;
+    flex: 1;
+}
+
+/* Ensure the highlight underline is still visible */
+.unit-header h1.highlight::after {
+    bottom: -8px;
 }
 
