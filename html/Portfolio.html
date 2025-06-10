@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ChaaruzuHub</title>
-    
-    <link rel="stylesheet" href="../css/Portfolio.css">
+      <link rel="stylesheet" href="../css/Portfolio.css">
     <link rel="stylesheet" href="../css/Animation.css">
     <link rel="stylesheet" href="../css/Fonts.css">
     <link rel="stylesheet" href="../css/Cursor.css">
@@ -14,6 +13,8 @@
     <link rel="icon" href="CHARLESLOGO.png">
     
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&family=Roboto+Mono:ital,wght@1,300&family=Kanit&family=Tilt+Neon&family=Permanent+Marker&family=Josefin+Sans&family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+    <script src="cursor-beat.js" defer></script>
     
 </head>
 <body>
@@ -72,8 +73,42 @@
     </section>
 
     <!-- Skills Section -->
-    <section class="section" id="more">
-        <div class="box-tab">
+    <section class="section" id="more">       
+    
+
+<section class="home-content about2">
+    <h2 class="label"><i class='bx bx-chevron-left' ></i>LEARN MORE<i class='bx bx-chevron-right'></i></h2>
+<div> 
+    <div class="page-1">
+   <div class="box-1">
+    <a href="https://www.google.com/maps/place/Bagong+Silang,+176,+Caloocan,+Metro+Manila/@14.7763783,121.0431522,15z/data=!3m1!4b1!4m6!3m5!1s0x3397afd00f8846bf:0xb06ac44183dd36a5!8m2!3d14.7771421!4d121.0430543!16s%2Fm%2F011v78n0?entry=ttu" target="_blank">
+        <div class="img-sizes picture-1 hidden">
+        <div class="text-image">
+        <h2>Click To know</h2>
+        <h3>For more information</h3>
+        </div>
+    </a>
+    </div>
+    <figcaption class=" hidden boxy boxy-1">
+    <h1>InizioCreator</h1>
+    <p>the Bagong Silang caloocan city, The name “Bagong Silang” translates to “newborn” in English, symbolizing renewed hope for its residents who were resettled from their original slum areas.</p>
+    </figcaption>
+</div>
+     
+</div>
+   
+
+    <div class="page-2">
+  <div class="box-2">
+      <img src="InizioProfile.jpg" alt="Handsome" class="img-sizes picture-2 hidden">
+       <div class="figcaption hidden boxy">
+         <h1>Im 17 years Old..</h1>
+         <p>I’m already immersing myself in the fascinating world of computer programming.I know that with each new concept I grasp, I’m not just learning to code - I’m also developing problem-solving skills, learning to think more logically, and opening up a world of opportunities for my future.</p>
+        </div>
+  </div>
+   </div>
+
+   <div class="box-tab">
             <div class="tab-tittle">
                 <p class="tab-links active-link" onclick="opentab('skills')">EDUCATION</p>
                 <p class="tab-links" onclick="opentab('Education')">SPECIFICATION</p>
@@ -121,39 +156,6 @@
         </div>
         </div>
     </div>
-    
-
-<section class="home-content about2">
-    <h2 class="label"><i class='bx bx-chevron-left' ></i>LEARN MORE<i class='bx bx-chevron-right'></i></h2>
-<div> 
-    <div class="page-1">
-   <div class="box-1">
-    <a href="https://www.google.com/maps/place/Bagong+Silang,+176,+Caloocan,+Metro+Manila/@14.7763783,121.0431522,15z/data=!3m1!4b1!4m6!3m5!1s0x3397afd00f8846bf:0xb06ac44183dd36a5!8m2!3d14.7771421!4d121.0430543!16s%2Fm%2F011v78n0?entry=ttu" target="_blank">
-        <div class="img-sizes picture-1 hidden">
-        <div class="text-image">
-        <h2>Click To know</h2>
-        <h3>For more information</h3>
-        </div>
-    </a>
-    </div>
-    <figcaption class=" hidden boxy boxy-1">
-    <h1>InizioCreator</h1>
-    <p>the Bagong Silang caloocan city, The name “Bagong Silang” translates to “newborn” in English, symbolizing renewed hope for its residents who were resettled from their original slum areas.</p>
-    </figcaption>
-</div>
-     
-</div>
-   
-
-    <div class="page-2">
-  <div class="box-2">
-      <img src="InizioProfile.jpg" alt="Handsome" class="img-sizes picture-2 hidden">
-       <div class="figcaption hidden boxy">
-         <h1>Im 17 years Old..</h1>
-         <p>I’m already immersing myself in the fascinating world of computer programming.I know that with each new concept I grasp, I’m not just learning to code - I’m also developing problem-solving skills, learning to think more logically, and opening up a world of opportunities for my future.</p>
-        </div>
-  </div>
-   </div>
 </section>
 
 
@@ -235,19 +237,50 @@
 
 </script>
 
-<script>            // Tab switching functionality
+<script>            // Tab switching functionality with smooth transitions
             const tablinks = document.getElementsByClassName("tab-links");
             const tabcontents = document.getElementsByClassName("tab-contents");
             
             function opentab(tabname) {
+                // Store the currently active tab
+                const currentActiveTab = document.querySelector(".tab-contents.active-tab");
+                
+                // Remove active state from all tab links
                 for(let tablink of tablinks) {
                     tablink.classList.remove("active-link");
                 }
-                for(let tabcontent of tabcontents) {
-                    tabcontent.classList.remove("active-tab");
-                }
+                
+                // Add active state to the clicked tab link
                 event.currentTarget.classList.add("active-link");
-                document.getElementById(tabname).classList.add("active-tab");
+                
+                // Only perform transition if there's an active tab
+                if (currentActiveTab) {
+                    // First, start the fade-out transition
+                    currentActiveTab.style.opacity = "0";
+                    currentActiveTab.style.transform = "translateY(20px)";
+                    
+                    // After the fade-out transition completes, switch tabs and fade in
+                    setTimeout(() => {
+                        // Remove active class from all tabs
+                        for(let tabcontent of tabcontents) {
+                            tabcontent.classList.remove("active-tab");
+                        }
+                        
+                        // Add active class to target tab
+                        const targetTab = document.getElementById(tabname);
+                        targetTab.classList.add("active-tab");
+                        
+                        // Trigger browser reflow
+                        void targetTab.offsetWidth;
+                        
+                        // Set initial properties for the incoming tab
+                        targetTab.style.opacity = "1";
+                        targetTab.style.transform = "translateY(0)";
+                    }, 300); // Match this timing with the CSS transition duration
+                } else {
+                    // First activation, no transition needed
+                    document.getElementById(tabname).classList.add("active-tab");
+                }
             }
         </script>
     </body>

@@ -1,55 +1,45 @@
-/* Base cursor for body */
-html, body {
-    cursor: url('../Photo/CursorMoto.png'), auto; 
+/* Hide default cursor */
+* {
+    cursor: none !important;
 }
 
-/* Interactive elements cursor */
-a,
-button,
-.clickable,
-.download-cv,
-.nav-bar ul li a,
-.tab-links,
-.minecraft,
-.subnautica,
-.osu,
-.img-texts,
-.information h1,
-.information h4,
-.information p,
-.btn2,
-.social-links a,
-.home a i,
-.btn a,
-input[type="text"],
-input[type="email"],
-textarea,
-[onclick],
-[role="button"],
-.picture-1,
-.picture-2,
-.games,
-.text-image {
-    cursor: url('../Photo/CursorMoto.png'), pointer !important;
+/* Custom cursor styles */
+.cursor {
+    position: fixed;
+    width: 48px;
+    height: 48px;
+    background: url('../Photo/CursorMoto.png') no-repeat center center;
+    background-size: contain;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    transition: transform 0.1s ease;
 }
 
-/* Hover states */
-.nav-bar ul li a:hover,
-.download-cv:hover,
-.social-links a:hover,
-.btn a:hover,
-.tab-links:hover,
-.games:hover,
-.picture-1:hover,
-.picture-2:hover,
-.message:hover,
-.btn2:hover {
-    cursor: url('../Photo/CursorMoto.png'), pointer !important;
+/* Beat animation when clicking */
+.cursor.beat {
+    animation: cursorBeat 0.3s ease forwards;
 }
 
-/* Form elements focus state */
-input:focus,
-textarea:focus,
-button:focus {
-    cursor: url('../Photo/CursorMoto.png'), text !important;
+/* Animation for cursor beating effect */
+@keyframes cursorBeat {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.3);
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+/* Hover effect for links and buttons */
+.cursor.link-hover {
+    transform: translate(-50%, -50%) scale(1.2);
+}
+
+/* Text input style */
+.cursor.input-hover {
+    transform: translate(-50%, -50%) scale(0.7);
 }
