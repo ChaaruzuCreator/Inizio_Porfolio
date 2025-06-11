@@ -251,7 +251,7 @@ section {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 50px 0;
+    overflow-y: hidden;
 }
 
 
@@ -344,7 +344,6 @@ figcaption p {
     justify-content: center;
     width: 100%;
     text-align: center;
-    padding: 0 20px;
     font-family: 'MCpixel', sans-serif;
 }
 .label-2 {
@@ -419,6 +418,9 @@ figcaption p {
 
 .picture-2 {
     float: right;
+    position: relative;
+    width:50%;
+    transition: 0.5s;
 }
 
 
@@ -527,7 +529,7 @@ figcaption p {
 .tab-tittle{
     display: flex;
     justify-content: center;
-    margin-top: 100px;
+    margin-top: 200px;
 }
 .tab-tittle p {
     letter-spacing: 5px;
@@ -540,12 +542,12 @@ figcaption p {
     min-height: 500px;
 }
 .tab-links{
-    font-size: 20px;
+    font-size: 10px;
     font-weight: 500;
     width: 350px;
     cursor: pointer;
     position: relative;
-    font-family: "Tilt neon";
+    font-family: "MCpixel";
     color: #ffffff;
     background-color: rgba(76, 56, 92, 0.588);
     padding: 20px;
@@ -557,30 +559,20 @@ figcaption p {
 }
 
 .tab-links:hover {
-    background-color: rgba(92, 65, 114, 0.8);
+    background-color: rgba(92, 65, 114, 0.596);
     transform: translateY(-3px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    border: 1px solid #ffffffb7;
 }
 
 .tab-links.active-link {
-    background-color: rgba(101, 71, 125, 0.9);
+    background-color: rgba(136, 63, 196, 0.9);
     color: white;
     transform: translateY(-5px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    border: 1px solid #ffffff;
 }
-.tab-links::after{
-    content: '';
-    width: 100%;
-    transform: scale(0);
-    height: 5px;
-    background: linear-gradient(90deg, rgba(139,13,255,1) 0%, rgba(186,26,196,1) 100%);
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    transition: 0.5s;
-    overflow: hidden;
-    border-radius: 0 0 8px 8px;
-}
+
 
 .tab-links.active-link::after{
     width: 100%;

@@ -134,6 +134,11 @@ figcaption {
     transition: all 1.2s;
 }
 
+.box-tab {
+    opacity: 0;
+    transition: all 1.2s;
+}
+
 
 
 .hidden {
@@ -158,20 +163,21 @@ figcaption {
 }
 
 .picture-1 {
-    border: 15px solid rgba(65, 62, 62, 0.973);
+    border: 2px solid rgba(255, 251, 246, 0.637);
     border-radius: 0;
 }
 .picture-2 {
-    border: 15px solid rgba(65, 62, 62, 0.973);
-;
+    border: 2px solid rgba(255, 251, 246, 0.637);
     border-radius: 0;
 }
 
 .picture-1:hover{
-    border: 15px solid rgba(114, 50, 241, 0.973)
+    border: 2px solid rgba(255, 251, 246, 0.637);
+    border-radius: 0;
 }
 .picture-2:hover {
-    border: 15px solid rgba(114, 50, 241, 0.973)
+    border: 2px solid rgba(255, 251, 246, 0.637);
+    border-radius: 0;
 }
 
 .sign {
