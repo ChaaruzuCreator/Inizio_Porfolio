@@ -286,7 +286,7 @@ section {
 .section {
     display: flex;
     flex-direction: column;
-    background: linear-gradient(180deg, #0d0616 18%, rgb(66, 33, 104) 100%);
+    background: linear-gradient(180deg, #0d0616 18%, #252525 100%);
     width: 100%;
     position: relative;
     align-items: center;
@@ -643,15 +643,17 @@ h1.highlight::after {
 /* From Uiverse.io by Bastiennnn */
 .tab-content-menu {
     display: flex;
-    width: 60%; /* Further reduced from 80% to 70% */
+    width: 65%;
     margin: 20px auto;
     background-color: #24233b;
-    border-radius: 8px;
+    border-radius: 12px;
     z-index: 1;
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.4);
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.5);
     transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
     overflow: hidden;
+    padding: 0 0 20px 0;
+    align-items: flex-start;
 }
 
 .tab-content-menu:hover {
@@ -677,7 +679,7 @@ h1.highlight::after {
     position: absolute;
     top: 30px;
     bottom: 0;
-    left: 220px; /* Matches the width of the image */
+    left: 340px; /* Adjusted for the new image width + margins */
     width: 1px;
     background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.1), transparent);
     z-index: 1;
@@ -718,16 +720,16 @@ h1.highlight::after {
 }
 
 .unit-1, .unit-2 {
-    padding: 20px;
-    margin: 50px;
+    padding: 15px;
+    margin: 40px 15px 20px 15px; /* Aligned top margin with the graduation picture */
     color: #fff;
-    flex: 0.7; /* Further reduced flex value */
+    flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     position: relative;
     z-index: 2;
-    max-width: 100%; /* Reduced from 60% to 50% */
+    max-width: 100%;
 }
 
 
@@ -786,30 +788,34 @@ h1.highlight::after {
 }
 
 .graduation-pic {
-    width: 400px;
+    width: 300px;
     aspect-ratio: 1/1;
     object-fit: cover;
-    border-radius: 0 0 0 8px;
-    margin: 30px 0 0 0;
+    border-radius: 8px;
+    margin: 45px 20px 0 20px;
     transition: all 0.5s ease;
     filter: brightness(0.9);
-    box-shadow: 4px 0 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    border: 2px solid rgba(255, 255, 255, 0.1);
 }
 
 .graduation-pic-1 {
-    width: 220px; /* Further reduced from 250px to 220px */
+    width: 200px;
     aspect-ratio: 3/4;
     object-fit: cover;
-    border-radius: 0 0 0 8px;
-    margin: 30px 0 0 0;
+    border-radius: 8px;
+    margin: 40px 20px 20px 20px;
     transition: all 0.5s ease;
     filter: brightness(0.9);
-    box-shadow: 4px 0 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    border: 2px solid rgba(255, 255, 255, 0.1);
 }
 
 .tab-content-menu:hover .graduation-pic,
 .tab-content-menu:hover .graduation-pic-1 {
-    filter: brightness(1.1);
+    filter: brightness(1.1) contrast(1.1);
+    transform: scale(1.02);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
 }
 
 .picture-wave {
