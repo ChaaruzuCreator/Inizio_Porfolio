@@ -297,11 +297,13 @@ section {
 }
 
 .img-sizes {
-    max-width: 500px;
+    max-width: 350px;
+    width: 100%;
     aspect-ratio: 1/1;
     border-radius: 8px;
-    margin: 0 30px;
+    margin: 0;
     object-fit: cover;
+    position: relative;
 }
 
 .box-2 h1, .box-2 p {
@@ -449,48 +451,183 @@ figcaption p {
 .box-3 {
     display: flex;
     justify-content: center;
-    align-items: center;
-    gap: 45px;
+    align-items: stretch; /* Make all children the same height */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    gap: 30px;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 30px;
 }
 
 .minecraft {
     background: url('../Photo/Minecraft.png');
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
     position: relative;
     width: 50%;
+    height: 300px; /* Fixed height for consistency */
     background-size: 200%;
-    transition: background-size 0.5s;
+    image-rendering: pixelated; /* Makes the image pixelated */
+    image-rendering: -moz-crisp-edges; /* Firefox */
+    image-rendering: crisp-edges; /* Standard */
+    transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
     overflow: hidden;
+    border: 4px solid #ffffff;
+    box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.7);
+    outline: 3px solid #000000;
+    transform: scale(0.95);
+    margin: 15px;
+    border-radius: 2px; /* Very slight rounding to avoid perfect square */
 }
 
 .subnautica {
     background: url('../Photo/GithubLinkpng.png');
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
     position: relative;
     width: 50%;
+    height: 300px; /* Fixed height for consistency */
     background-size: 100%;
-    transition: background-size 0.5s;
+    image-rendering: pixelated; /* Makes the image pixelated */
+    image-rendering: -moz-crisp-edges; /* Firefox */
+    image-rendering: crisp-edges; /* Standard */
+    transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
     overflow: hidden;
+    border: 4px solid #ffffff;
+    box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.7);
+    outline: 3px solid #000000;
+    transform: scale(0.95);
+    margin: 15px;
+    border-radius: 2px; /* Very slight rounding to avoid perfect square */
 }
 
 .osu {
     background: url('../Photo/osu.jpg');
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
     position: relative;
     width: 50%;
+    height: 300px; /* Fixed height for consistency */
     background-size: 100%;
-    transition: background-size 0.5s;
+    image-rendering: pixelated; /* Makes the image pixelated */
+    image-rendering: -moz-crisp-edges; /* Firefox */
+    image-rendering: crisp-edges; /* Standard */
+    transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
     overflow: hidden;
+    border: 4px solid #ffffff;
+    box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.7);
+    outline: 3px solid #000000;
+    transform: scale(0.95);
+    margin: 15px;
+    border-radius: 2px; /* Very slight rounding to avoid perfect square */
+}
+
+.league {
+    background: linear-gradient(to bottom, #091428, #0A1428);
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    width: 50%;
+    height: 300px; /* Fixed height for consistency */
+    background-size: 100%;
+    image-rendering: pixelated; /* Makes the image pixelated */
+    image-rendering: -moz-crisp-edges; /* Firefox */
+    image-rendering: crisp-edges; /* Standard */
+    transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+    overflow: hidden;
+    border: 4px solid #ffffff;
+    box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.7);
+    outline: 3px solid #000000;
+    transform: scale(0.95);
+    margin: 15px;
+    border-radius: 2px; /* Very slight rounding to avoid perfect square */
+}
+
+.league::before {
+    content: "LoL";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'MCpixel', sans-serif;
+    font-size: 60px;
+    color: #C89B3C;
+    text-shadow: 4px 4px 0 #000;
+    opacity: 0.5;
+    z-index: 0;
+}
+
+.valorant {
+    background: linear-gradient(to bottom, #FF4655, #1F1F1F);
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    width: 50%;
+    height: 300px; /* Fixed height for consistency */
+    background-size: 100%;
+    image-rendering: pixelated; /* Makes the image pixelated */
+    image-rendering: -moz-crisp-edges; /* Firefox */
+    image-rendering: crisp-edges; /* Standard */
+    transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+    overflow: hidden;
+    border: 4px solid #ffffff;
+    box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.7);
+    outline: 3px solid #000000;
+    transform: scale(0.95);
+    margin: 15px;
+    border-radius: 2px; /* Very slight rounding to avoid perfect square */
+}
+
+.valorant::before {
+    content: "V";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'MCpixel', sans-serif;
+    font-size: 60px;
+    color: #FF4655;
+    text-shadow: 4px 4px 0 #000;
+    opacity: 0.5;
+    z-index: 0;
+}
+
+.genshin {
+    background: linear-gradient(to bottom, #3D7194, #74C2CE);
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    width: 50%;
+    height: 300px; /* Fixed height for consistency */
+    background-size: 100%;
+    image-rendering: pixelated; /* Makes the image pixelated */
+    image-rendering: -moz-crisp-edges; /* Firefox */
+    image-rendering: crisp-edges; /* Standard */
+    transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+    overflow: hidden;
+    border: 4px solid #ffffff;
+    box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.7);
+    outline: 3px solid #000000;
+    transform: scale(0.95);
+    margin: 15px;
+    border-radius: 2px; /* Very slight rounding to avoid perfect square */
+}
+
+.genshin::before {
+    content: "GI";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'MCpixel', sans-serif;
+    font-size: 60px;
+    color: #FFD700;
+    text-shadow: 4px 4px 0 #000;
+    opacity: 0.5;
+    z-index: 0;
 }
 
 .img-texts {
-    border-radius: 8px;
     position: absolute;
     bottom: 0;
     left: 0;
@@ -502,20 +639,51 @@ figcaption p {
     color: white;
     cursor: pointer;
     background-color: rgba(25, 20, 38, 0.8);
-    transition: 1s;
+    transition: 0.4s ease;
     opacity: 0;
-    
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges; /* Firefox */
+    image-rendering: crisp-edges; /* Standard */
+    border: 2px solid transparent;
+    overflow: hidden; /* Keep text contained within the element */
 }
 
 .text-hover {
     text-align: center;
     width: 100%;
-    padding-bottom: 30px;
+    padding: 18px 15px;
+    margin-bottom: 20px;
+    background-color: rgba(0, 0, 0, 0.85);
+    border-top: 4px solid #ffffff;
+    border-bottom: 4px solid #ffffff;
+    position: relative;
+    transform: translateY(10px);
+    transition: transform 0.4s ease, background-color 0.3s ease;
+    image-rendering: pixelated;
+    box-shadow: 0px -2px 0px 0px #000, 0px 2px 0px 0px #000; /* Black shadow on top and bottom */
 }
 
 .img-texts h3 {
     font-family: 'MCpixel', sans-serif;
-    font-size: 40px;
+    font-size: 28px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+    color: #ffffff;
+    image-rendering: pixelated;
+    text-shadow: 3px 3px 0 #000, -2px 2px 0 #000, 2px -2px 0 #000, -2px -2px 0 #000;
+    transform: translateZ(0); /* Force hardware acceleration for smoother text */
+}
+
+.img-texts h4 {
+    font-family: 'MCpixel', sans-serif;
+    font-size: 16px;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 0 #000;
+    padding: 0 10px;
+    color: #eeeeee;
+    image-rendering: pixelated;
+    transform: translateZ(0); /* Force hardware acceleration for smoother text */
 }
 
 

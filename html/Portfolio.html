@@ -3,21 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ChaaruzuHub</title>    <link rel="stylesheet" href="../css/Portfolio.css">
+    <title>ChaaruzuHub</title>    
+    <link rel="stylesheet" href="../css/Portfolio.css">
     <link rel="stylesheet" href="../css/Animation.css">
     <link rel="stylesheet" href="../css/Fonts.css">
     <link rel="stylesheet" href="../css/Cursor.css">
     <link rel="stylesheet" href="../css/social-icons.css">
+    <link rel="stylesheet" href="../css/PixelArt.css">
+    <link rel="stylesheet" href="../css/LoadingScreen.css">
     
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="icon" href="../Logo/IC-logo-2.png" type="image/png">
     
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&family=Roboto+Mono:ital,wght@1,300&family=Kanit&family=Tilt+Neon&family=Permanent+Marker&family=Josefin+Sans&family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    
-    <script src="cursor-beat.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&family=Roboto+Mono:ital,wght@1,300&family=Kanit&family=Tilt+Neon&family=Permanent+Marker&family=Josefin+Sans&family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">    <script src="cursor-beat.js" defer></script>
+    <script src="loading-animation.js" defer></script>
+    <script src="favicon-animation.js" defer></script>
     
 </head>
-<body>
+<body class="animations-paused">    <!-- Loading Screen -->
+    <div class="loader-container" id="loader">
+        <img src="../Logo/IC-logo-2.png" alt="InizioCreator Logo" class="loader-logo">
+        <div class="loader-progress">
+            <div class="loader-bar"></div>
+        </div>
+        <div class="loader-text">LOADING<span class="loading-dots"></span></div>
+        <audio id="loading-complete-sound" preload="auto">
+            <source src="../sounds/splash-sound.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+    
+    <main class="content" id="main-content">
+    
     <!-- Header -->
     <header class="header-box">
         <div class="name">
@@ -176,13 +192,12 @@
    <div class="label-2">PROJECTS</div>
    <div class="page-3">
      <div class="box-3">
-      
         <div class="img-sizes minecraft games">
         
         <a href="https://www.minecraft.net/en-us" target="_blank"><div class="img-texts">
             <div class="text-hover">
-            <h3>minecraft</h3>
-            <h4>Click to learn more</h4>
+            <h3 class="pixel-text">MINECRAFT</h3>
+            <h4 class="pixel-text">Click to learn more</h4>
             </div>
         </div></a>
 
@@ -191,19 +206,18 @@
 
         <a href="https://store.steampowered.com/app/264710/Subnautica/" target="_blank"><div class="img-texts">
             <div class="text-hover">
-            <h3>GitHub</h3>
-            <h4>Click to learn more</h4>
+            <h3 class="pixel-text">GITHUB</h3>
+            <h4 class="pixel-text">Click to learn more</h4>
             </div>
         </div></a>
       
       </div>
       
         <div class="img-sizes osu games">
-            <a href="https://osu.ppy.sh/users/20428067" target="_blank"></a>
-        <div class="img-texts">
+            <a href="https://osu.ppy.sh/users/20428067" target="_blank"><div class="img-texts">
             <div class="text-hover">
-            <h3>Osu!</h3>
-            <h4>Click to learn more</h4>
+            <h3 class="pixel-text">OSU!</h3>
+            <h4 class="pixel-text">Click to learn more</h4>
             </div>
         </div></a>
 
@@ -294,8 +308,9 @@
                 } else {
                     // First activation, no transition needed
                     document.getElementById(tabname).classList.add("active-tab");
-                }
-            }
+                }            }
         </script>
+          <!-- Loading screen is controlled by loading-animation.js -->
+    </main>
     </body>
 </html>
