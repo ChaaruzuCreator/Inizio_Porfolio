@@ -139,13 +139,18 @@
 }
 
 .nav-bar ul li a:hover {
-    background-color: rgba(137, 43, 226, 0.568);
-    color: rgba(225, 127, 255, 0.75);
+    padding: 10px 20px;
+    background-color: rgb(255, 248, 232);
+    color: rgb(20, 20, 20);
+    border-radius: 8px;
+    transition: 0.2s ease-in;
 }
 .nav-bar ul li a.active {
-    padding: 10px;
-    border-bottom: 2px solid rgb(170, 77, 194);
-    color: rgb(235, 235, 235);
+    padding: 10px 20px;
+    background-color: rgb(255, 248, 232);
+    color: rgb(20, 20, 20);
+    border-radius: 8px;
+    transition: 0.2s ease-in;
 }
 
 
@@ -265,7 +270,7 @@ figcaption {
 
     100% {
         opacity: 1;
-        transform: translateY(0px) scale(l);
+        transform: translateY(0px) scale(1);
     }
 }
 
@@ -277,7 +282,7 @@ figcaption {
 
     100% {
         opacity: 1;
-        transform: translateY(0px) scale(l);
+        transform: translateY(0px) scale(1);
     }
 }
 
@@ -289,7 +294,7 @@ figcaption {
 
     100% {
         opacity: 1;
-        transform: translateY(0px) scale(l);
+        transform: translateY(0px) scale(1);
     }
 }
 
@@ -306,7 +311,7 @@ figcaption {
 
     100% {
         opacity: 1;
-        transform: translateY(0px) scale(l);
+        transform: translateY(0px) scale(1);
     }
 }
 

@@ -40,21 +40,21 @@
         </div>
         <nav class="nav-bar">
             <ul class="tabs">
-                <li><a href="#home" class="active">&nbsp;Home</a></li>
-                <li><a href="#about">&nbsp;About</a></li>
-                <li><a href="#Contact">&nbsp;Contant</a></li>
-                <li><a href="" class="download-cv">&nbsp;DOWNLOAD CV</a></li>
+                <li><a href="#home" class="active nav-home">HOME</a></li>
+                <li><a href="#about" class="nav-about">ABOUT</a></li>
+                <li><a href="#Contact" class="nav-contact">CONTACT</a></li>
+                <li><a href="" class="download-cv">DOWNLOAD CV</a></li>
             </ul>
         </nav>
     </header>
 
     <!-- Hero Section -->
-    <section class="background" id="home">
+    <section class="background">
         <div class="gwapito">
             <img src="IMG_20230220_0001.png" alt="Profile Image">
         </div>
-    </section>    <!-- Home Section with Video -->
-    <section class="home">
+    </section>
+    <section class="home" id="home">
         <div class="video-container">
             <video autoplay muted loop playsinline class="video-background">
                 <source src="../Video/Computervideobackground.mp4" type="video/mp4">
@@ -70,7 +70,7 @@
     <section class="home1" id="about">
         <div class="home-content">
             <div class="description">
-                <h1>I'm Charles tatoy Razon</h1>
+                <h1>I'm Charles Tatoy Razon</h1>
                 <h3>Student <span>Developer</span> ( ˘ ³˘ ) ♡</h3>
                 <p>Securing a good position in the field of Information Technology that will allow me to apply my technical knowledge and problem-solving skills while providing me the opportunity to further develop my abilities and gain valuable hands-on experience.</p>
             </div>            <div class="action-container">
@@ -222,30 +222,49 @@
       </div>
     </div>
      
-
-
-
-
         <!-- Scripts -->
         <script type="text/javascript">
             // Navigation highlight on scroll
-            let sections = document.querySelectorAll('section');
-            let navLinks = document.querySelectorAll('header nav ul li a');
-
-            window.onscroll = () => {
-                sections.forEach(sec => {
-                    let top = window.scrollY;
-                    let offset = sec.offsetTop - 150;
-                    let height = sec.offsetHeight;
-                    let id = sec.getAttribute('id');
-                    if(top >= offset && top < offset + height) {
-                        navLinks.forEach(links => {
-                            links.classList.remove('active');
-                            document.querySelector('header nav ul li a[href*=' + id + ']').classList.add('active');
-                        });
+            document.addEventListener("DOMContentLoaded", function() {
+                let homeLink = document.querySelector('header nav ul li a.nav-home');
+                let aboutLink = document.querySelector('header nav ul li a.nav-about');
+                let contactLink = document.querySelector('header nav ul li a.nav-contact');
+                let navLinks = document.querySelectorAll('header nav ul li a');
+                
+                // Get section positions
+                let homeSection = document.getElementById('home');
+                let aboutSection = document.getElementById('about');
+                let contactSection = document.getElementById('Contact');
+                
+                window.onscroll = function() {
+                    let scrollPosition = window.scrollY;
+                    
+                    // Remove active class from all links
+                    navLinks.forEach(link => {
+                        link.classList.remove('active');
+                    });
+                    
+                    // Very top of page or home section is visible
+                    if (scrollPosition < getPosition(aboutSection) - 200) {
+                        homeLink.classList.add('active');
+                    } 
+                    // About section is visible
+                    else if (scrollPosition >= getPosition(aboutSection) - 200 && 
+                           (contactSection ? scrollPosition < getPosition(contactSection) - 200 : true)) {
+                        aboutLink.classList.add('active');
                     }
-                });
-            };
+                    // Contact section is visible
+                    else if (contactSection && scrollPosition >= getPosition(contactSection) - 200) {
+                        contactLink.classList.add('active');
+                    }
+                };
+                
+                // Helper function to get the position of an element
+                function getPosition(element) {
+                    if (!element) return 0;
+                    return element.getBoundingClientRect().top + window.scrollY;
+                }
+            });
 </script>
 
 <script>            // Intersection Observer for animations
