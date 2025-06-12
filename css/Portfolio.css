@@ -16,6 +16,8 @@ html, body {
 body {
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
+    background: linear-gradient(180deg, rgb(19, 12, 29) 50%, rgb(17, 1, 37) 100%);
+    min-height: 100vh;
 }
 
 section {
