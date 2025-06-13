@@ -548,10 +548,14 @@ section {
     justify-content: center;
     overflow: hidden;
     z-index: 1;
-    background: linear-gradient(180deg, rgba(19, 12, 29, 0.5) 50%, rgb(13, 6, 22) 100%);
+    background: linear-gradient(180deg, rgba(19, 12, 29, 0.13) 50%, rgb(13, 6, 22) 100%);
 }
 
 .home h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     color: rgb(255, 255, 255);
     font-size: 200px;
     letter-spacing: 1px;
@@ -559,13 +563,40 @@ section {
     font-weight: 800;
     line-height: 100%;
     margin-bottom: 16px;
+    z-index: -3;
+    animation: fadeUp2 1s ease-out forwards;
+}
+
+.home .top {
+  z-index: -2;
+  color: #00000000;
+  -webkit-text-stroke: 2px #ffffff;
+  animation: fadeUp2 1s ease-out forwards;
+  opacity: 0;
 }
 
 .home h2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 200%);
     color: rgb(182, 182, 182);
     font-size: 30px;
     letter-spacing: 5px;
     font-family: "Tilt Neon";
+    z-index: 3;
+}
+
+/* Fade up animation for elements with centered positioning */
+@keyframes fadeUp2 {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -50%) translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(-50%, -50%) translateY(0);
+    }
 }
 
 
@@ -601,14 +632,26 @@ section {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    z-index: -1;
+    z-index: -2;
+    animation: fadeUp1 1s;
+}
+
+@keyframes fadeUp1 {
+    0% {
+        opacity: 0;
+        transform: translateY(100px) scale(0.9);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px) scale(1);
+    }
 }
 
 .home-content-1 {
     text-align: center;
     padding: 20px;
     border-radius: 20px;
-    animation: fade-up-2 1s;
 }
 
 .home1 {
@@ -1637,6 +1680,44 @@ textarea {
 /* Ensure the highlight underline is still visible */
 .unit-header h1.highlight::after {
     bottom: -8px;
+}
+
+/* Fade up animation for centered elements */
+@keyframes fadeUpCentered {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -50%) translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(-50%, -50%) translateY(0);
+    }
+}
+
+
+
+/* Alternative fade up using top property */
+@keyframes fadeUpWithTop {
+    0% {
+        opacity: 0;
+        top: calc(50% + 30px);
+    }
+    100% {
+        opacity: 1;
+        top: 50%;
+    }
+}
+
+/* Apply to your centered element */
+.your-centered-element {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* Use the centered fade up animation */
+    animation: fadeUpCentered 1s ease-out forwards;
+    /* Start invisible */
+    opacity: 0;
 }
 
 
