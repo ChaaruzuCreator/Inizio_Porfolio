@@ -1,24 +1,4 @@
-.social-media a  {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 40px;
-    height: 40px;
-    background: transparent;
-    font-size: 40px;
-    margin: 30px 15px 30px 0;
-    color: rgb(0, 101, 216);
-    transform: translateZ(0);
-}
 
-.social-media a i {
-    transform: translateZ(0);
-    transition: transform 0.5s ease;
-}
-
-.social-media a i:hover {
-    transform: scale(1.5) rotate(6deg);
-}
 
 .btn a {
     color: azure;
@@ -150,7 +130,7 @@
     background-color: rgb(255, 248, 232);
     color: rgb(20, 20, 20);
     border-radius: 8px;
-    transition: 0.2s ease-in;
+    transition: 0.2s ease-in-out;
 }
 
 
