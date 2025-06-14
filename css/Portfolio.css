@@ -103,15 +103,15 @@ section {
 
 .nav-bar ul li a {
     padding: 10px 15px;
-    color: rgb(185, 185, 185);
+    color: rgb(226, 226, 226);
     font-weight: 700;
     font-size: 15px;
     transition: color 0.5s;
     transition: 0.2s ease-in;
     letter-spacing: 1px;
     font-family: sans-serif;
-    background-color: #170220;
     border-radius: 25px;
+    background-color: #1c1127;
 }
 
 .nav-bar ul li a.active {
@@ -133,14 +133,20 @@ section {
 }
 
 .download-cv {
-    border: 2px solid #fff6e2;
+    font-family: sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    color: rgb(226, 226, 226);
     transition: 0.5s ease;
-    font-family: 'MCpixel', sans-serif
+    padding: 10px 15px;
+    background-color: #1c1127;
 
 }
 .download-cv:hover {
-    color: white;
+    color: rgb(0, 0, 0);
     transition: 0.5s ease;
+    background-color: #e4e4e4;
+    border: 1px solid #e4e4e4;
     
 }
 
@@ -567,12 +573,16 @@ section {
     animation: fadeUp2 1s ease-out forwards;
 }
 
+
 .home .top {
   z-index: -2;
   color: #00000000;
   -webkit-text-stroke: 2px #ffffff;
-  animation: fadeUp2 1s ease-out forwards;
+  animation: fadeUp2 2s ease-out forwards;
   opacity: 0;
+  will-change: transform;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
 }
 
 .home h2 {
@@ -613,6 +623,14 @@ section {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.home .video-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
 }
 
 .picture-background {
@@ -646,6 +664,12 @@ section {
         opacity: 1;
         transform: translateY(0px) scale(1);
     }
+}
+
+/* Home pixel particles container styling */
+.home-pixel-particles {
+    pointer-events: none;
+    z-index: -3;
 }
 
 .home-content-1 {

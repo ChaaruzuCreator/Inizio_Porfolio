@@ -62,11 +62,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 
                 // Remove animations-paused class to start all animations
                 document.body.classList.remove('animations-paused');
-                
-                // Remove the loader from DOM after transition
+                  // Remove the loader from DOM after transition
                 setTimeout(function() {
                     loader.style.display = 'none';
-                }, 500);
+                }, 800);
             }, 500);
         }
         loaderBar.style.width = progress + '%';
@@ -87,7 +86,7 @@ function createPixelParticle(container) {
     const y = Math.random() * window.innerHeight;
     
     // Random color (theme colors)
-    const colors = ['#907bc5', '#a249dd', '#ED1E79', '#ffffff'];
+    const colors = ['#EFB6C8', '#A888B5', '#8174A0', '#441752'];
     const color = colors[Math.floor(Math.random() * colors.length)];
     
     // Set styles
