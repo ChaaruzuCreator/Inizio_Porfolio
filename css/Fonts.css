@@ -7,3 +7,8 @@
     font-family: 'cocogoose';
     src: url('../Fonts/Cocogoose-Pro-Regular-trial.ttf');
 }
+
+@font-face {
+    font-family: 'Typewriter';
+    src: url('../Fonts/JMH\ Typewriter\ dry-Thin.otf');
+}

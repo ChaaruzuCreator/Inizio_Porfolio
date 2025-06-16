@@ -12,7 +12,6 @@ html, body {
     overflow-x: hidden;
 }
 
-
 body {
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
@@ -23,46 +22,6 @@ body {
 section {
     overflow-x: hidden;
     width: 100%;
-}
-
-.header-box {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    z-index: 100;
-    padding: 0 2vw;
-    transition: background 0.3s, box-shadow 0.3s;
-}
-
-.nav-bar-container {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-}
-
-.name {
-    display: flex;
-    align-items: center;
-}
-
-.name img {
-    width: 50px;
-    padding-right: 5px;
-}
-
-.name h2 {
-    color: #ffffff;
-    padding: 0 5px;
-    pointer-events: none;
-    font-size: 30px;
-    letter-spacing: 3px;
-    font-family: 'Permanent Marker';
-    text-shadow: 1px 2px 3px #3731d3;
 }
 
 .background {
@@ -90,34 +49,6 @@ section {
     display: none;
 }
 
-/* ------------------------Navigation------------------------ */
-.nav-bar ul {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-}
-
-.nav-bar ul li {
-    margin: 0 10px;
-}
-
-.nav-bar ul li a {
-    padding: 10px 15px;
-    color: rgb(226, 226, 226);
-    font-weight: 700;
-    font-size: 15px;
-    transition: color 0.5s;
-    transition: 0.2s ease-in;
-    letter-spacing: 1px;
-    font-family: sans-serif;
-    border-radius: 25px;
-    background-color: #1c1127;
-}
-
-.nav-bar ul li a.active {
-    color: #ffffff;
-}
-
 .description {
    max-width: 700px;
    margin-right: 20px;
@@ -132,23 +63,6 @@ section {
     overflow: hidden;    
 }
 
-.download-cv {
-    font-family: sans-serif;
-    font-weight: 700;
-    font-size: 15px;
-    color: rgb(226, 226, 226);
-    transition: 0.5s ease;
-    padding: 10px 15px;
-    background-color: #1c1127;
-
-}
-.download-cv:hover {
-    color: rgb(0, 0, 0);
-    transition: 0.5s ease;
-    background-color: #e4e4e4;
-    border: 1px solid #e4e4e4;
-    
-}
 
 /* Share Button Styles - From Uiverse.io by Mohammad-Rahme-576 */
 /* Container Styles */
@@ -706,7 +620,7 @@ section {
     background-size: cover;
     background-position: center;
     z-index: -1;
-    border: 2px solid #faf2e9;
+    border: 1px solid #f8f8f883;
     border-radius: 20px; /* Radius for the background image itself */
     box-shadow: 0 0 0 2000px #0d0616; /* Extend the background color to hide white space */
     clip-path: inset(0 0 0 0 round 20px); /* Clip to ensure no spillover beyond border radius */
@@ -766,7 +680,7 @@ section {
 .section {
     display: flex;
     flex-direction: column;
-    background: linear-gradient(180deg, #0d0616 18%, #170220 100%);
+    background: linear-gradient(180deg, #0d0616 18%, #0e0e0e 100%);
     width: 100%;
     position: relative;
     align-items: center;
@@ -793,10 +707,12 @@ figcaption {
 }
 
 figcaption p {
-    line-height: 40px;
+    line-height: 30px;
+    font-family: 'typewriter', sans-serif;
 }
 .figcaption p {
-    line-height: 40px;
+    line-height: 30px;
+    font-family: 'typewriter', sans-serif;
     
 }
 .figcaption {
@@ -829,7 +745,7 @@ figcaption p {
     margin-top: 80px;
     font-size: 80px;
     font-weight: 700;
-    color:#907bc5;
+    color:#eeeeee;
     align-items: center;
     font-family: 'MCpixel', sans-serif;
 }
@@ -950,7 +866,7 @@ figcaption p {
     transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
     overflow: hidden;
     border: 4px solid #ffffff;
-    box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.7);
+    box-shadow: 8px 8px 0 rgba(158, 158, 158, 0.7);
     outline: 3px solid #000000;
     transform: scale(0.95);
     margin: 15px;
@@ -971,7 +887,7 @@ figcaption p {
     transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
     overflow: hidden;
     border: 4px solid #ffffff;
-    box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.7);
+    box-shadow: 8px 8px 0 rgba(158, 158, 158, 0.7);
     outline: 3px solid #000000;
     transform: scale(0.95);
     margin: 15px;
@@ -992,7 +908,7 @@ figcaption p {
     transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
     overflow: hidden;
     border: 4px solid #ffffff;
-    box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.7);
+    box-shadow: 8px 8px 0 rgba(158, 158, 158, 0.7);
     outline: 3px solid #000000;
     transform: scale(0.95);
     margin: 15px;
