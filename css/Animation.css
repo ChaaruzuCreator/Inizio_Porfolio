@@ -118,20 +118,7 @@
     }
 }
 
-.nav-bar ul li a:hover {
-    padding: 10px 20px;
-    background-color: rgb(255, 248, 232);
-    color: rgb(20, 20, 20);
-    border-radius: 8px;
-    transition: 0.2s ease-in;
-}
-.nav-bar ul li a.active {
-    padding: 10px 20px;
-    background-color: rgb(255, 248, 232);
-    color: rgb(20, 20, 20);
-    border-radius: 8px;
-    transition: 0.2s ease-in-out;
-}
+
 
 
 .contact i, .contact-2 i {
