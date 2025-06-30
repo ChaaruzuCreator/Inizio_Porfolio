@@ -10,11 +10,10 @@
 
 html, body {
     scroll-behavior: smooth;
-    overflow-x: hidden;
+    scroll-padding-top: var(--scroll-padding-top, 70px);
 }
 
 body {
-    overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
     background: linear-gradient(180deg, rgb(19, 12, 29) 50%, rgb(17, 1, 37) 100%);
     min-height: 100vh;
@@ -50,11 +49,7 @@ section {
     display: none;
 }
 
-.description {
-   max-width: 700px;
-   margin-right: 20px;
-   pointer-events: none;
-}
+
 
 .line-1{
     display: flex;
@@ -68,37 +63,30 @@ section {
 
 /* ------------------------HOME PAGE 1----------------------- */
 
+.home-pero-wala{
+    height: 100vh;
+    width: 100%;
+    z-index: 1;
+    background: linear-gradient(180deg, rgba(19, 12, 29, 0.13) 50%, rgb(13, 6, 22) 100%);
+}
+
 .home {
+    position: fixed;
+    top: 0;
+    left: 0;
     height: 100vh;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    z-index: 1;
+    z-index: -1;
     background: linear-gradient(180deg, rgba(19, 12, 29, 0.13) 50%, rgb(13, 6, 22) 100%);
 }
 
 .home1 {
     position: relative;
     width: max-content;
-}
-
-.home-content-2 {
-    border-radius: 20px;
-    padding: 30px;
-    position: absolute;
-    top: 50%;
-    left: 30%;
-    transform: translate(-50%, -50%);
-
-    border: 1px solid rgba(255, 255, 255, 0.26);
-    background-color: rgba(225, 198, 255, 0.014);
-    backdrop-filter: blur(10px) saturate(180%);
-    border: 0.0625rem solid rgba(206, 168, 255, 0.493);
-    border-radius: 2rem;
-    box-shadow: 0 8px 32px rgba(8, 8, 8, 0.2), inset 0 4px 10px rgba(255, 255, 255, 0.137);;
-    z-index: -1;
 }
 
 .home h1 {
@@ -114,7 +102,7 @@ section {
     line-height: 100%;
     margin-bottom: 16px;
     z-index: -3;
-    animation: fadeUp2 1s ease-out forwards;
+    animation: fadeUp2 1s ease-out forwards, floatingPortfolio 4s ease-in-out infinite 1s;
 }
 
 
@@ -154,6 +142,17 @@ section {
     }
 }
 
+@keyframes floatingPortfolio {
+    0% {
+        transform: translate(-50%, -50%) translateY(0px);
+    }
+    50% {
+        transform: translate(-50%, -50%) translateY(-15px);
+    }
+    100% {
+        transform: translate(-50%, -50%) translateY(0px);
+    }
+}
 
 .home a i {
     font-size: 50px;
@@ -222,40 +221,7 @@ section {
     padding: 20px;
 }
 
-.home1 {
-    display: flex;
-    width: 100%;
-    height: 100vh;
-    align-items: center;
-    justify-items: center;
-    padding: 70px 10% 0;  
-    position: relative;
-    z-index: 1;
-    overflow: hidden;
-    justify-content: center;
-    align-items: center;
-    border: 50px solid #0d0616;
-    background-color: #0d0616;
-    transition: 0.5s;
-    
-}
 
-.home1::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: url('../Photo/FirstBackgroundChaCha.png');
-    background-size: cover;
-    background-position: center;
-    z-index: -1;
-    border-radius: 20px; /* Radius for the background image itself */
-    box-shadow: 0 0 0 2000px #0d0616; /* Extend the background color to hide white space */
-    clip-path: inset(0 0 0 0 round 20px); /* Clip to ensure no spillover beyond border radius */
-    
-}
 
 
 
@@ -263,7 +229,7 @@ section {
 .section {
     display: flex;
     flex-direction: column;
-    background-color: #141523; 
+    background-color: #140b1f; 
     width: 100%;
     position: relative;
     align-items: center;
@@ -283,14 +249,13 @@ section {
     text-align: center;
     font-family: 'MCpixel', sans-serif;
     margin-top: 7rem;
-    
 }
 .label span{
     color: white;
 }
 .label .span2 {
     background: #190033;
-    background: linear-gradient(90deg,rgba(25, 0, 51, 1) 0%, rgba(57, 11, 138, 1) 39%, rgba(85, 0, 255, 1) 100%);
+    background: linear-gradient(90deg,rgb(66, 0, 136) 0%, rgba(57, 11, 138, 1) 39%, rgba(85, 0, 255, 1) 100%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -312,31 +277,7 @@ section {
 
 
 
-.description h1{
-    color: white;
-    font-size: 45px;
-    font-weight: 700;
-}
 
-.description h3 {
-    font-family: "MCpixel", sans-serif;
-    color: rgb(179, 179, 179);
-    font-size: 40px;
-    margin: 10px 0 20px 0;
-    
-}
-
-.description h3 span {
-    color: rgb(135, 118, 148);
-}
-
-.description p {
-    color: white;
-    letter-spacing: 3px;
-    word-spacing: 5px;
-    line-height: 1.7;
-    text-align: justify;
-}
 
 
 
@@ -351,28 +292,47 @@ section {
     position: relative;
 }
 
+
 .box-2 h1, .box-2 p {
     text-align: end;
 }
+
+.more-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 figcaption {
     overflow: hidden;
+    flex: 1;
 }
 
 figcaption p {
+    text-align: justify;
     line-height: 30px;
     font-family: 'typewriter', sans-serif;
 }
 .figcaption p {
     line-height: 30px;
     font-family: 'typewriter', sans-serif;
-    
 }
 .figcaption {
     overflow: hidden;
+    flex: 1;
 }
 
 .boxy {
     padding: 50px;
+}
+
+.box-1 {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+    max-width: 1200px;
+    flex-wrap: wrap;
 }
 
 .box-1 h4{
@@ -384,10 +344,13 @@ figcaption p {
 }
 
 .page-1 {
-    width: 75%;
-    margin: 100px auto;
+    width: 100%;
+    margin-top: 100px;
     display: flex;
     justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 0 20px;
 }
 
 .learn-more {
@@ -484,145 +447,6 @@ figcaption p {
     color:#eeeeee;
     align-items: center;
     font-family: 'MCpixel', sans-serif;
-}
-
-.page-3 {
-    width: 100%;
-    margin: 50px 0 300px 0;
-}
-
-
-.box-3 {
-    display: flex;
-    justify-content: center;
-    align-items: stretch; /* Make all children the same height */
-    flex-wrap: wrap; /* Allow wrapping on smaller screens */
-    gap: 25px;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-.minecraft {
-    background: url('../Photo/Minecraft.png');
-    background-position: center;
-    background-repeat: no-repeat;
-    position: relative;
-    width: 50%;
-    height: 300px; /* Fixed height for consistency */
-    background-size: 200%;
-    image-rendering: pixelated; /* Makes the image pixelated */
-    image-rendering: -moz-crisp-edges; /* Firefox */
-    image-rendering: crisp-edges; /* Standard */
-    transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
-    overflow: hidden;
-    border: 4px solid #ffffff;
-    box-shadow: 8px 8px 0 rgba(158, 158, 158, 0.7);
-    outline: 3px solid #000000;
-    transform: scale(0.95);
-    margin: 15px;
-    border-radius: 2px; /* Very slight rounding to avoid perfect square */
-}
-
-.subnautica {
-    background: url('../Photo/GithubLinkpng.png');
-    background-position: center;
-    background-repeat: no-repeat;
-    position: relative;
-    width: 50%;
-    height: 300px; /* Fixed height for consistency */
-    background-size: 100%;
-    image-rendering: pixelated; /* Makes the image pixelated */
-    image-rendering: -moz-crisp-edges; /* Firefox */
-    image-rendering: crisp-edges; /* Standard */
-    transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
-    overflow: hidden;
-    border: 4px solid #ffffff;
-    box-shadow: 8px 8px 0 rgba(158, 158, 158, 0.7);
-    outline: 3px solid #000000;
-    transform: scale(0.95);
-    margin: 15px;
-    border-radius: 2px; /* Very slight rounding to avoid perfect square */
-}
-
-.osu {
-    background: url('../Photo/osu.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    position: relative;
-    width: 50%;
-    height: 300px; /* Fixed height for consistency */
-    background-size: 100%;
-    image-rendering: pixelated; /* Makes the image pixelated */
-    image-rendering: -moz-crisp-edges; /* Firefox */
-    image-rendering: crisp-edges; /* Standard */
-    transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
-    overflow: hidden;
-    border: 4px solid #ffffff;
-    box-shadow: 8px 8px 0 rgba(158, 158, 158, 0.7);
-    outline: 3px solid #000000;
-    transform: scale(0.95);
-    margin: 15px;
-    border-radius: 2px; /* Very slight rounding to avoid perfect square */
-}
-
-.img-texts {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: flex-end;
-    color: white;
-    cursor: pointer;
-    background-color: rgba(25, 20, 38, 0.8);
-    transition: 0.4s ease;
-    opacity: 0;
-    image-rendering: pixelated;
-    image-rendering: -moz-crisp-edges; /* Firefox */
-    image-rendering: crisp-edges; /* Standard */
-    border: 2px solid transparent;
-    overflow: hidden; /* Keep text contained within the element */
-}
-
-.text-hover {
-    text-align: center;
-    width: 100%;
-    padding: 18px 15px;
-    margin-bottom: 20px;
-    background-color: rgba(0, 0, 0, 0.85);
-    border-top: 4px solid #ffffff;
-    border-bottom: 4px solid #ffffff;
-    position: relative;
-    transform: translateY(10px);
-    transition: transform 0.4s ease, background-color 0.3s ease;
-    image-rendering: pixelated;
-    box-shadow: 0px -2px 0px 0px #000, 0px 2px 0px 0px #000; /* Black shadow on top and bottom */
-}
-
-.img-texts h3 {
-    font-family: 'MCpixel', sans-serif;
-    font-size: 28px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-bottom: 5px;
-    color: #ffffff;
-    image-rendering: pixelated;
-    text-shadow: 3px 3px 0 #000, -2px 2px 0 #000, 2px -2px 0 #000, -2px -2px 0 #000;
-    transform: translateZ(0); /* Force hardware acceleration for smoother text */
-}
-
-.img-texts h4 {
-    font-family: 'MCpixel', sans-serif;
-    font-size: 16px;
-    letter-spacing: 1px;
-    text-shadow: 2px 2px 0 #000;
-    padding: 0 10px;
-    color: #eeeeee;
-    image-rendering: pixelated;
-    transform: translateZ(0); /* Force hardware acceleration for smoother text */
 }
 
 

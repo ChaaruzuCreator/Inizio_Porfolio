@@ -123,21 +123,4 @@
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
 }
 
-/* Positioning for social icons-media in the About section */
-.home-content .social-icons-media {
-    margin-left: 20px;
-}
 
-/* Container for LEARN MORE button and social icons-media */
-.action-container {
-    display: flex;
-    align-items: center;
-    margin-top: 20px;
-    flex-wrap: wrap;
-}
-
-.action-container .social-icons-media {
-    display: flex;
-    align-items: center;
-    margin-left: 20px;
-}

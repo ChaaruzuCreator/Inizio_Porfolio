@@ -1,25 +1,5 @@
 
 
-.btn a {
-    color: azure;
-    border: 1px solid white;
-    padding: 12px 20px 12px 20px;
-    font-weight: 100;
-    font-size: 15px;
-    letter-spacing: 3px;
-    transition: 0.3s; 
-    
-}
-
-.btn {
-    display: inline-flex;
-}
-
-.btn a:hover {
-    color: rgb(146, 149, 151);
-    border: 1px solid rgb(153, 156, 158);
-}
-
 .picture-1:hover .text-image{
     display: flex;
     flex-direction: column;
@@ -40,82 +20,6 @@
 
 .img-size:hover {
     transform: scale(1.1) rotate(-6deg);
-}
-
-.minecraft:hover {
-    transform: scale(1.02);
-    background-size: 250%;
-    box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.8);
-    filter: brightness(1.2) contrast(1.2) saturate(1.1);
-    border-color: #ffcc00; /* Minecraft gold color on hover */
-}
-
-.subnautica:hover {
-    transform: scale(1.02);
-    background-size: 108%;
-    box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.8);
-    filter: brightness(1.2) contrast(1.2) saturate(1.1);
-    border-color: #00aaff; /* Subnautica blue color on hover */
-}
-
-.osu:hover {
-    transform: scale(1.02);
-    background-size: 125%;
-    box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.8);
-    filter: brightness(1.2) contrast(1.2) saturate(1.1);
-    border-color: #ff66aa; /* Osu pink color on hover */
-}
-
-.games {
-    transform: translateY(0);
-    transition: 0.4s ease;
-    border-radius: 4px;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    min-width: 280px;
-    max-width: 500px;
-}
-
-.games:hover {
-    transform: scale(1.02) translateY(-5px);
-    z-index: 1; /* Bring hovered game to front */
-}
-
-.games:hover .img-texts {
-    height: 100%;
-    opacity: 1;
-    border: 2px dashed #ffffff; /* Add dashed pixel border effect */
-    animation: pixel-border 2s infinite linear;
-}
-
-.games:hover .text-hover {
-    transform: translateY(0);
-    background-color: rgba(0, 0, 0, 0.9);
-}
-
-@keyframes pixel-border {
-    0% {
-        border-style: solid;
-        border-width: 2px 0 2px 2px;
-    }
-    25% {
-        border-style: solid;
-        border-width: 2px 2px 0 2px;
-    }
-    50% {
-        border-style: solid;
-        border-width: 0 2px 2px 2px;
-    }
-    75% {
-        border-style: solid;
-        border-width: 2px 2px 2px 0;
-    }
-    100% {
-        border-style: solid;
-        border-width: 2px 0 2px 2px;
-    }
 }
 
 
@@ -291,6 +195,8 @@ figcaption {
         transform: rotateZ(5deg);
     }
 }
+
+
 
 /* Animation Control for Loading Screen */
 .animations-paused * {

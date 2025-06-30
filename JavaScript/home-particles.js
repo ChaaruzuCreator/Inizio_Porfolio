@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
         homeParticlesContainer.className = 'home-pixel-particles';        homeParticlesContainer.style.position = 'absolute';
         homeParticlesContainer.style.width = '100%';
         homeParticlesContainer.style.height = '100%';
-        homeParticlesContainer.style.zIndex = '-3';
+        homeParticlesContainer.style.zIndex = '-1';
         homeParticlesContainer.style.pointerEvents = 'none';
         videoContainer.appendChild(homeParticlesContainer);
         
