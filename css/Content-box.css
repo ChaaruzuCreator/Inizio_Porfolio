@@ -6,6 +6,7 @@
     padding: 20px;
     text-align: center;
     color: azure;
+    overflow: hidden;
 }
 
 .radio-inputs {
@@ -59,7 +60,6 @@
 .content-box {
     position: absolute;
     background: rgba(137, 15, 185, 0.1);
-    border: 1px solid rgba(137, 15, 185, 0.3);
     border-radius: 15px;
     padding: 25px;
     opacity: 0;
@@ -149,6 +149,7 @@
     align-items: center;
     justify-content: center;
     padding: 20px;
+    
 }
 
 .tech-logos-grid {
@@ -167,7 +168,6 @@
     justify-content: center;
     padding: 20px 30px;
     background: rgba(137, 15, 185, 0.1);
-    border: 1px solid rgba(137, 15, 185, 0.3);
     border-radius: 12px;
     transition: all 0.3s ease;
     cursor: pointer;
@@ -196,6 +196,60 @@
     text-align: center;
 }
 
+/* Design logos grid for boxMOTO-4 */
+.boxMOTO-4 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    overflow: clip;
+}
+
+.design-logos-grid {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    width: 100%;
+    max-width: 400px;
+}
+
+.design-logo-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 30px;
+    background: rgba(137, 15, 185, 0.1);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.design-logo-item:hover {
+    background: rgba(137, 15, 185, 0.2);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(137, 15, 185, 0.3);
+}
+
+.design-logo-item .logo-icon {
+    font-size: 2rem;
+    margin-bottom: 8px;
+    transition: transform 0.3s ease;
+}
+
+.design-logo-item:hover .logo-icon {
+    transform: scale(1.1);
+}
+
+.design-logo-item .logo-name {
+    color: rgb(254, 220, 255);
+    font-size: 0.75rem;
+    font-weight: 500;
+    text-align: center;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     .radio-inputs {
@@ -215,6 +269,16 @@
     
     .tech-logo-item {
         padding: 12px;
+    }
+    
+    .design-logos-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        max-width: 280px;
+    }
+    
+    .design-logo-item {
+        padding: 12px 8px;
     }
     
     .logo-icon {
