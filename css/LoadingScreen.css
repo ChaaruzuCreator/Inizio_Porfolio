@@ -10,9 +10,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: url(../Photo/Artboard.png), linear-gradient(180deg, rgba(19, 12, 29, 0.192) 50%, rgba(17, 1, 37, 0.212) 100%);
-    background-size: cover;
-    background-position: center;
+    background-color: #070707;
     z-index: 9999;
     transition: opacity 0.8s ease-out, visibility 0.8s ease-out;
 }

@@ -102,7 +102,11 @@ section {
     line-height: 100%;
     margin-bottom: 16px;
     z-index: -3;
-    animation: fadeUp2 1s ease-out forwards, floatingPortfolio 4s ease-in-out infinite 1s;
+    
+}
+
+.home .bottom {
+    animation: fadeUp2 1s ease-out forwards;
 }
 
 
@@ -111,7 +115,7 @@ section {
   z-index: -2;
   color: #00000000;
   -webkit-text-stroke: 2px #ffffff;
-  animation: fadeUp2 2s ease-out forwards;
+  animation: fadeUp2 2s ease-out forwards, floatingPortfolio 4s ease-in-out infinite 1s;
   opacity: 0;
   will-change: transform;
     backface-visibility: hidden;
@@ -135,6 +139,17 @@ section {
     0% {
         opacity: 0;
         transform: translate(-50%, -50%) translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(-50%, -50%) translateY(0);
+    }
+}
+
+@keyframes fadeDown2 {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -50%) translateY(-30px);
     }
     100% {
         opacity: 1;
@@ -457,67 +472,8 @@ figcaption p {
     
 }
 
-.tab-tittle{
-    display: flex;
-    justify-content: center;
-    margin-top: 200px;
-}
-.tab-tittle p {
-    letter-spacing: 5px;
-}
-.tab-box {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    min-height: 500px;
-}
-.tab-links{
-    font-size: 10px;
-    font-weight: 500;
-    width: 350px;
-    cursor: pointer;
-    position: relative;
-    font-family: "MCpixel";
-    color: #ffffff;
-    background-color: rgba(76, 56, 92, 0.588);
-    padding: 20px;
-    margin-right: 10px;
-    border-radius: 8px;
-    text-align: center;
-    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
-    z-index: 2;
-}
-
-.tab-links:hover {
-    background-color: rgba(92, 65, 114, 0.596);
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-    border: 1px solid #ffffffb7;
-}
-
-.tab-links.active-link {
-    background-color: rgba(136, 63, 196, 0.9);
-    color: white;
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
-    border: 1px solid #ffffff;
-}
 
 
-.tab-links.active-link::after{
-    width: 100%;
-    transform: scale(1);
-    
-}
-.tab-contents {
-    width: 90rem;
-    min-height: 500px;
-    padding: 25px 15px;
-    border-radius: 15px;
-    transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1),
-                transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-}
 
 .box-inside {
     display: flex;
@@ -547,108 +503,15 @@ h1.highlight::after {
     transition: width 0.3s ease;
 }
 
-.tab-content-menu:hover h1.highlight::after {
-    width: 100px;
-}
+
 
 .nonelist {
     list-style: none;
 }
 
 
-.tab-contents h2 {
-    color: #ffffff;
-    font-size: 40px;
-    margin: 10px;
-    padding: 10px 0 10px 0;
-    font-family: Josefin Sans;
-    letter-spacing: 3px;    
-    overflow: hidden;
-}
-.tab-contents p {
-    font-size: 30px;
-    max-width: 50rem;
-    margin: 10px;
-    overflow: hidden;
-}
-/* From Uiverse.io by Bastiennnn */
-.tab-content-menu {
-    display: flex;
-    width: 65%;
-    margin: 20px auto;
-    background-color: #24233b;
-    border-radius: 12px;
-    z-index: 1;
-    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.5);
-    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-    position: relative;
-    overflow: hidden;
-    padding: 0 0 20px 0;
-    align-items: flex-start;
-}
 
-.tab-content-menu:hover {
-    transform: translateY(-7px);
-    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.5);
-}
 
-.tab-content-menu::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 30px;
-    width: 100%;
-    background-color: #302e4d;
-    border-radius: 8px 8px 0 0;
-    z-index: 1;
-}
-
-/* Add a subtle border between image and content */
-.tab-content-menu::after {
-    content: '';
-    position: absolute;
-    top: 30px;
-    bottom: 0;
-    left: 340px; /* Adjusted for the new image width + margins */
-    width: 1px;
-    background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.1), transparent);
-    z-index: 1;
-}
-
-.circle {
-    position: absolute;
-    top: 10px;
-    left: 15px;
-    display: flex;
-    gap: 6px;
-    z-index: 2; /* Ensure circles appear above other elements */
-}
-
-.circle2 {
-    display: inline-block;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    transition: transform 0.3s ease;
-}
-
-.tab-content-menu:hover .circle2,
-.nonedesign:hover .circle2 {
-    transform: scale(1.2);
-}
-
-.red {
-    background-color: #ff605c;
-}
-
-.yellow {
-    background-color: #ffbd44;
-}
-
-.green {
-    background-color: #00ca4e;
-}
 
 .unit-1, .unit-2 {
     padding: 15px;
@@ -696,27 +559,7 @@ h1.highlight::after {
     color: white;
 }
 
-.tab-contents{
-    opacity: 0;
-    visibility: hidden;
-    position: absolute;
-    transform: translateY(20px);
-    transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1), 
-                transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), 
-                visibility 0s 0.5s;
-    width: 100%;
-    left: 0;
-    right: 0;
-}
-.tab-contents.active-tab{
-    opacity: 1;
-    visibility: visible;
-    position: relative;
-    transform: translateY(0);
-    transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1), 
-                transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-    z-index: 1;
-}
+
 
 .graduation-pic {
     width: 300px;
@@ -742,12 +585,7 @@ h1.highlight::after {
     border: 2px solid rgba(255, 255, 255, 0.1);
 }
 
-.tab-content-menu:hover .graduation-pic,
-.tab-content-menu:hover .graduation-pic-1 {
-    filter: brightness(1.1) contrast(1.1);
-    transform: scale(1.02);
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
-}
+
 
 .picture-wave {
     width: 120%;
@@ -995,10 +833,7 @@ textarea {
     border-radius: 50%;
 }
 
-.tab-content-menu:hover .unit-1 p,
-.tab-content-menu:hover .unit-2 p {
-    opacity: 1;
-}
+
 
 .unit-1 ul, .unit-2 ul {
     margin: 0;
@@ -1037,10 +872,7 @@ textarea {
     color: #ffffff;
 }
 
-/* Make the tab contents fill the space */
-.tab-contents {
-    padding: 20px 0;
-}
+
 
 /* Styling for the "Favorite" tab */
 .nonedesign {

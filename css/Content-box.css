@@ -1,0 +1,227 @@
+.boxMOTO-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 20px;
+    text-align: center;
+    color: azure;
+}
+
+.radio-inputs {
+    display: flex;
+    border-radius: 0.5rem;
+    border: 1px solid rgba(54, 1, 52, 0.26);
+    background-color: rgba(225, 198, 255, 0.014);
+    backdrop-filter: blur(10px) saturate(180%);
+    box-shadow: 0 8px 32px rgba(8, 8, 8, 0.2);
+    padding: 0.25rem;
+    width: 300px;
+    font-size: 14px;
+}
+
+.radio-inputs .radio {
+    flex: 1;
+    text-align: center;
+}
+
+.radio-inputs .radio input {
+    display: none;
+}
+
+.radio-inputs .radio .name {
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.5rem;
+    padding: .5rem 0;
+    color: rgb(247, 227, 255);
+    transition: all 0.3s ease;
+}
+
+.radio-inputs .radio input:checked + .name {
+    background-color: #890fb962;
+    color: rgb(254, 220, 255);
+    font-weight: 600;
+}
+
+.radio-inputs .radio .name:hover {
+    background-color: rgba(137, 15, 185, 0.2);
+}
+
+/* Content boxes */
+.content-boxes {
+    position: relative;
+    width: 100%;
+}
+
+.content-box {
+    position: absolute;
+    background: rgba(137, 15, 185, 0.1);
+    border: 1px solid rgba(137, 15, 185, 0.3);
+    border-radius: 15px;
+    padding: 25px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    visibility: hidden;
+}
+
+.content-box.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.box-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(137, 15, 185, 0.2);
+    
+}
+
+.box-header h3 {
+    margin: 0;
+    color: rgb(254, 220, 255);
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.tech-icon {
+    font-size: 2rem;
+}
+
+.box-body p {
+    color: rgb(220, 208, 255);
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.education-list {
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.education-list h3 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    padding: 0  0 5px;
+}
+
+.education-list ul {
+    color: rgb(222, 194, 255);
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    text-align: left;
+    list-style: circle;
+}
+
+.education-list ul li span{
+    color: rgb(220, 208, 255);
+    font-size: 1rem;
+    line-height: 1.6;
+    text-align: left;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.skill-tag {
+    background: rgba(137, 15, 185, 0.3);
+    color: rgb(254, 220, 255);
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    border: 1px solid rgba(137, 15, 185, 0.4);
+}
+
+/* Tech logos grid for boxMOTO-3 */
+.boxMOTO-3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.tech-logos-grid {
+    display: flex;
+    flex-wrap: nowrap;
+     justify-content: center;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    width: 100%;
+}
+
+.tech-logo-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 30px;
+    background: rgba(137, 15, 185, 0.1);
+    border: 1px solid rgba(137, 15, 185, 0.3);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.tech-logo-item:hover {
+    background: rgba(137, 15, 185, 0.2);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(137, 15, 185, 0.3);
+}
+
+.logo-icon {
+    font-size: 2rem;
+    margin-bottom: 8px;
+    transition: transform 0.3s ease;
+}
+
+.tech-logo-item:hover .logo-icon {
+    transform: scale(1.1);
+}
+
+.logo-name {
+    color: rgb(254, 220, 255);
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .radio-inputs {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .content-box {
+        padding: 20px;
+    }
+    
+    .tech-logos-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        max-width: 250px;
+    }
+    
+    .tech-logo-item {
+        padding: 12px;
+    }
+    
+    .logo-icon {
+        font-size: 1.5rem;
+    }
+    
+    .logo-name {
+        font-size: 0.7rem;
+    }
+}

@@ -1,0 +1,23 @@
+{
+  "name": "inizio_porfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChaaruzuCreator/Inizio_Porfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ChaaruzuCreator/Inizio_Porfolio/issues"
+  },
+  "homepage": "https://github.com/ChaaruzuCreator/Inizio_Porfolio#readme",
+  "dependencies": {
+    "locomotive-scroll": "^4.1.4"
+  }
+}
