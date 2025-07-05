@@ -10,7 +10,7 @@
     overflow: clip; 
 }
 
-.about-me img {
+.about-me .logo-3d {
     width: 300px;
     margin: 20px;
     animation: floating 4s ease-in-out infinite 1s;
@@ -44,7 +44,7 @@
     font-weight: 700;
 }
 
-.about-me h4 {
+.about-me h3 {
     font-size: 15px;
     color: #d3d3d3;
     text-align: center;

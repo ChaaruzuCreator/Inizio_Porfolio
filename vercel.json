@@ -1,23 +1,16 @@
 {
-  "version": 2,  "builds": [
+  "version": 2,
+  "builds": [
     {
       "src": "html/**/*.html",
       "use": "@vercel/static"
     },
     {
-      "src": "html/**/*.js",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "JavaScript/**/*.js",
+      "src": "javascript/**/*.js",
       "use": "@vercel/static"
     },
     {
       "src": "css/**/*.css",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "video/**/*",
       "use": "@vercel/static"
     },
     {
@@ -36,7 +29,8 @@
       "src": "Fonts/**/*.{ttf,otf,woff,woff2}",
       "use": "@vercel/static"
     }
-  ],  "routes": [
+  ],
+  "routes": [
     {
       "src": "/",
       "dest": "/html/Portfolio.html"
@@ -46,12 +40,8 @@
       "dest": "/css/$1"
     },
     {
-      "src": "/JavaScript/(.*)",
-      "dest": "/JavaScript/$1"
-    },
-    {
-      "src": "/video/(.*)",
-      "dest": "/video/$1"
+      "src": "/javascript/(.*)",
+      "dest": "/javascript/$1"
     },
     {
       "src": "/Video/(.*)",
@@ -73,5 +63,10 @@
       "src": "/(.*)",
       "dest": "/html/$1"
     }
-  ]
+  ],
+  "functions": {
+    "html/*.html": {
+      "includeFiles": "**"
+    }
+  }
 }
