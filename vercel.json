@@ -1,5 +1,38 @@
 {
   "version": 2,
+<<<<<<< HEAD
+=======
+  "builds": [
+    {
+      "src": "html/**/*.html",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "javascript/**/*.js",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "css/**/*.css",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "Video/**/*",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "Logo/**/*.{png,jpg,jpeg,gif,ico,svg}",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "Photo/**/*.{png,jpg,jpeg,gif,ico,svg}",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "Fonts/**/*.{ttf,otf,woff,woff2}",
+      "use": "@vercel/static"
+    }
+  ],
+>>>>>>> parent of 090fa8b (Updated Vercel)
   "routes": [
     {
       "src": "/",
@@ -20,6 +53,13 @@
     {
       "src": "/javascript/(.*)",
       "dest": "/javascript/$1"
+<<<<<<< HEAD
+=======
+    },
+    {
+      "src": "/Video/(.*)",
+      "dest": "/Video/$1"
+>>>>>>> parent of 090fa8b (Updated Vercel)
     },
     {
       "src": "/Logo/(.*)",
@@ -28,14 +68,31 @@
     {
       "src": "/Photo/(.*)",
       "dest": "/Photo/$1"
+<<<<<<< HEAD
     },
     {
       "src": "/Video/(.*)",
       "dest": "/Video/$1"
+=======
+>>>>>>> parent of 090fa8b (Updated Vercel)
     },
     {
       "src": "/Fonts/(.*)",
       "dest": "/Fonts/$1"
+<<<<<<< HEAD
     }
   ]
+=======
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/html/$1"
+    }
+  ],
+  "functions": {
+    "html/*.html": {
+      "includeFiles": "**"
+    }
+  }
+>>>>>>> parent of 090fa8b (Updated Vercel)
 }
