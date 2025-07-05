@@ -1,14 +1,8 @@
 {
   "version": 2,
-<<<<<<< HEAD
-=======
   "builds": [
     {
       "src": "html/**/*.html",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "javascript/**/*.js",
       "use": "@vercel/static"
     },
     {
@@ -16,35 +10,30 @@
       "use": "@vercel/static"
     },
     {
+      "src": "javascript/**/*.js",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "Logo/**/*.{png,jpg,jpeg,gif,ico,svg,webp}",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "Photo/**/*.{png,jpg,jpeg,gif,ico,svg,webp}",
+      "use": "@vercel/static"
+    },
+    {
       "src": "Video/**/*",
       "use": "@vercel/static"
     },
     {
-      "src": "Logo/**/*.{png,jpg,jpeg,gif,ico,svg}",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "Photo/**/*.{png,jpg,jpeg,gif,ico,svg}",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "Fonts/**/*.{ttf,otf,woff,woff2}",
+      "src": "Fonts/**/*.{ttf,otf,woff,woff2,eot}",
       "use": "@vercel/static"
     }
   ],
->>>>>>> parent of 090fa8b (Updated Vercel)
   "routes": [
     {
       "src": "/",
       "dest": "/html/Portfolio.html"
-    },
-    {
-      "src": "/index.html",
-      "dest": "/html/Portfolio.html"
-    },
-    {
-      "src": "/html/(.*)",
-      "dest": "/html/$1"
     },
     {
       "src": "/css/(.*)",
@@ -53,13 +42,6 @@
     {
       "src": "/javascript/(.*)",
       "dest": "/javascript/$1"
-<<<<<<< HEAD
-=======
-    },
-    {
-      "src": "/Video/(.*)",
-      "dest": "/Video/$1"
->>>>>>> parent of 090fa8b (Updated Vercel)
     },
     {
       "src": "/Logo/(.*)",
@@ -68,31 +50,18 @@
     {
       "src": "/Photo/(.*)",
       "dest": "/Photo/$1"
-<<<<<<< HEAD
     },
     {
       "src": "/Video/(.*)",
       "dest": "/Video/$1"
-=======
->>>>>>> parent of 090fa8b (Updated Vercel)
     },
     {
       "src": "/Fonts/(.*)",
       "dest": "/Fonts/$1"
-<<<<<<< HEAD
-    }
-  ]
-=======
     },
     {
-      "src": "/(.*)",
+      "src": "/html/(.*)",
       "dest": "/html/$1"
     }
-  ],
-  "functions": {
-    "html/*.html": {
-      "includeFiles": "**"
-    }
-  }
->>>>>>> parent of 090fa8b (Updated Vercel)
+  ]
 }
