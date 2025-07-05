@@ -1039,7 +1039,7 @@ textarea {
 
 .project-image {
     position: relative;
-    height: 180px;
+    height: 100px;
     overflow: hidden;
     background: linear-gradient(135deg, rgba(169, 101, 207, 0.1), rgba(85, 0, 255, 0.1));
 }
