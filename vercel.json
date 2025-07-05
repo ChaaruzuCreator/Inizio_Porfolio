@@ -18,15 +18,19 @@
       "use": "@vercel/static"
     },
     {
-      "src": "Logo/**/*.{png,jpg,jpeg,gif,ico,svg}",
+      "src": "Logo/**/*.{png,jpg,jpeg,gif,ico,svg,webp}",
       "use": "@vercel/static"
     },
     {
-      "src": "Photo/**/*.{png,jpg,jpeg,gif,ico,svg}",
+      "src": "Photo/**/*.{png,jpg,jpeg,gif,ico,svg,webp}",
       "use": "@vercel/static"
     },
     {
-      "src": "Fonts/**/*.{ttf,otf,woff,woff2}",
+      "src": "Fonts/**/*.{ttf,otf,woff,woff2,eot}",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "**/*.{mp4,webm,ogg,avi,mov}",
       "use": "@vercel/static"
     }
   ],
@@ -37,31 +41,75 @@
     },
     {
       "src": "/css/(.*)",
-      "dest": "/css/$1"
+      "dest": "/css/$1",
+      "headers": {
+        "Cache-Control": "public, max-age=31536000, immutable"
+      }
     },
     {
       "src": "/javascript/(.*)",
-      "dest": "/javascript/$1"
+      "dest": "/javascript/$1",
+      "headers": {
+        "Cache-Control": "public, max-age=31536000, immutable"
+      }
     },
     {
       "src": "/Video/(.*)",
-      "dest": "/Video/$1"
+      "dest": "/Video/$1",
+      "headers": {
+        "Cache-Control": "public, max-age=31536000, immutable"
+      }
     },
     {
       "src": "/Logo/(.*)",
-      "dest": "/Logo/$1"
+      "dest": "/Logo/$1",
+      "headers": {
+        "Cache-Control": "public, max-age=31536000, immutable"
+      }
     },
     {
       "src": "/Photo/(.*)",
-      "dest": "/Photo/$1"
+      "dest": "/Photo/$1",
+      "headers": {
+        "Cache-Control": "public, max-age=31536000, immutable"
+      }
     },
     {
       "src": "/Fonts/(.*)",
-      "dest": "/Fonts/$1"
+      "dest": "/Fonts/$1",
+      "headers": {
+        "Cache-Control": "public, max-age=31536000, immutable"
+      }
+    },
+    {
+      "src": "/(.*\\.(js|css|png|jpg|jpeg|gif|ico|svg|webp|mp4|webm|ogg|ttf|otf|woff|woff2|eot))",
+      "headers": {
+        "Cache-Control": "public, max-age=31536000, immutable"
+      }
     },
     {
       "src": "/(.*)",
       "dest": "/html/$1"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/javascript/(.*)",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/javascript"
+        }
+      ]
+    },
+    {
+      "source": "/css/(.*)",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "text/css"
+        }
+      ]
     }
   ],
   "functions": {
