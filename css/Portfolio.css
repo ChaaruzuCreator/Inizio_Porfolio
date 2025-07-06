@@ -11,6 +11,7 @@
 html, body {
     scroll-behavior: smooth;
     scroll-padding-top: var(--scroll-padding-top, 70px);
+    scroll-snap-type: y proximity;
 }
 
 body {
@@ -244,7 +245,7 @@ section {
 .section {
     display: flex;
     flex-direction: column;
-    background-color: #140b1f; 
+    background-color: #080808; 
     width: 100%;
     position: relative;
     align-items: center;
@@ -1020,26 +1021,24 @@ textarea {
 }
 
 .project-card {
-    background: rgba(30, 30, 30, 0.8);
+    background: rgba(27, 12, 44, 0.637);
     border: 1px solid rgba(169, 101, 207, 0.2);
     border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 8px 25px rgba(20, 8, 32, 0.4);
     transition: all 0.3s ease;
-    width: 300px;
     flex-shrink: 0;
     backdrop-filter: blur(10px);
 }
 
 .project-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 35px rgba(169, 101, 207, 0.3);
+    box-shadow: 0 5px 25px rgba(169, 101, 207, 0.3);
     border-color: rgba(169, 101, 207, 0.5);
 }
 
 .project-image {
     position: relative;
-    height: 100px;
+    height: 130px;
     overflow: hidden;
     background: linear-gradient(135deg, rgba(169, 101, 207, 0.1), rgba(85, 0, 255, 0.1));
 }
@@ -1056,7 +1055,7 @@ textarea {
 }
 
 .project-info {
-    padding: 20px;
+    padding: 20px 20px 10px 20px;
     color: white;
 }
 

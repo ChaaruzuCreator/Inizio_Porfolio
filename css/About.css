@@ -8,13 +8,13 @@
     background-position: center;
     background-size: cover;
     overflow: clip;
-    
+    scroll-snap-align: start;
 }
 
 .about-me .logo-3d {
-    width: 300px;
+    width: 200px;
     margin: 20px;
-    animation: floating 4s ease-in-out infinite 1s;
+    border-radius: 50%;
 }
 @keyframes floating {
     0% {

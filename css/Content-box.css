@@ -58,8 +58,8 @@
 
 .content-box {
     position: absolute;
-    background: rgba(137, 15, 185, 0.1);
-    border-radius: 15px;
+    border: 1px solid rgba(94, 0, 138, 0.514);
+    border-radius: 25px;
     padding: 25px;
     opacity: 0;
     transition: opacity 0.3s ease;
@@ -178,7 +178,7 @@
     align-items: center;
     justify-content: center;
     padding: 20px 30px;
-    background: rgba(137, 15, 185, 0.1);
+    border: 2px solid rgba(137, 15, 185, 0.3);
     border-radius: 12px;
     transition: all 0.3s ease;
     cursor: pointer;
@@ -188,6 +188,11 @@
     background: rgba(137, 15, 185, 0.2);
     transform: translateY(-5px);
     box-shadow: 0 8px 25px rgba(137, 15, 185, 0.3);
+}
+
+.tech-icon img {
+    width: 80px;
+    animation: floating 4s ease-in-out infinite 1s;
 }
 
 .logo-icon {
@@ -231,7 +236,7 @@
     align-items: center;
     justify-content: center;
     padding: 20px 30px;
-    background: rgba(137, 15, 185, 0.1);
+    border: 2px solid rgba(137, 15, 185, 0.3);
     border-radius: 12px;
     transition: all 0.3s ease;
     cursor: pointer;
